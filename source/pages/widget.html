@@ -1,0 +1,2796 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+   <head>
+      <meta charset="UTF-8">
+      <meta name="description" content="">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <un-pipe sass="app" main="widget"></un-pipe>
+      <link rel="preconnect" href="https://fonts.googleapis.com">
+      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+      <link href="https://fonts.googleapis.com/css2?family=Heebo:wght@400;500;700&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+      <title>My page</title>
+      <script src="https://unpkg.com/flex-layout-system/dist/browser-layout.min.js"></script>
+   </head>
+   <body>
+      <!-- widget -->
+      
+      <div class="widget">
+         <flex-box class="widget-header" row gap="20px" ai="center" jc="space-between">
+            <div class="widget-header-name">Search Geo Objects</div>
+            <flex-box class="widget-header" row gap="20px" ai="center">
+               <button class="widget-header-button widget-button">{{{icon "minus"}}}</button>
+               <button class="widget-header-button widget-header-button-unpin widget-button">{{{icon "unpin"}}}</button>
+               <button class="widget-header-button widget-header-button-pin widget-button">{{{icon "pin"}}}</button>
+            </flex-box>
+         </flex-box>
+         <div class="widget-body">
+            <flex-box class="widget-wrap" row gap="20px" ai="center">
+               <!-- filter -->
+               <flex-box class="widget-filter" row gap="20px" ai="center" jc="space-between">
+                  <button class="widget-button ">{{{icon "filter"}}}</button>
+                  <flex-box class="widget-button-text" row gap="10px" ai="center">
+                     <span>Placemarks</span> <span>{{{icon "filter_arrow"}}}</span> 
+                  </flex-box>
+               </flex-box>
+               <!-- search -->
+               <flex-box class="widget-search" row gap="20px" ai="center">
+                  <input value="Search" class="widget-search-input" type="search" name="search" id="">
+                  <label class="widget-search-label" for="search">
+                     <div class="">{{{icon "search"}}}</div>
+                     <div class="widget-search-hidden">{{{icon "cross"}}}</div>
+                  </label>
+               </flex-box>
+            </flex-box>
+            <!-- result search -->
+            <div class="widget-result">
+               <div class="widget-wrap">
+                  <flex-box class="widget-folder widget-folder-active" ai="center" jc="space-between">
+                     <flex-box ai="center" class="widget-folder-name">
+                        {{{icon "zones"}}}
+                        <span>Zones</span>
+                     </flex-box>
+                     <flex-box class="widget-folder-icon">
+                        {{{icon "zones_arrow"}}}
+                     </flex-box>
+                  </flex-box>
+                  <div class="widget-dropdown widget-list">
+                     <div class="widget-container">
+                        <flex-box ai="center" jc="space-between" class="widget-folder  widget-subfolder">
+                           <flex-box ai="center" class="">
+                              <div class="">
+                                 <label class="widget-folder-label">
+                                 <input class="widget-folder-check input" checked type="checkbox">
+                                 <span>{{{icon "checkbox"}}}</span>
+                                 </label>
+                              </div>
+                              <div class="widget-folder-name widget-subname">
+                                 {{{icon "zones"}}}
+                                 <span>Zone 1</span>
+                              </div>
+                           </flex-box>
+                           <div class="widget-folder-icon">{{{icon "zones_arrow"}}}</div>
+                        </flex-box>
+                     </div>
+                     <div class="widget-container">
+                        <flex-box ai="center" jc="space-between" class="widget-folder widget-subfolder">
+                           <flex-box ai="center" class="">
+                              <div class="">
+                                 <label class="widget-folder-label">
+                                 <input class="widget-folder-check input" checked type="checkbox">
+                                 <span>{{{icon "checkbox"}}}</span>
+                                 </label>
+                              </div>
+                              <div class="widget-folder-name widget-subname">
+                                 {{{icon "zones"}}}
+                                 <span>Zone 1</span>
+                              </div>
+                           </flex-box>
+                           <div class="widget-folder-icon">{{{icon "zones_arrow"}}}</div>
+                        </flex-box>
+                     </div>
+                     <div class="widget-container">
+                        <flex-box ai="center" jc="space-between" class="widget-folder widget-subfolder-active widget-subfolder ">
+                           <flex-box ai="center" class="">
+                              <div class="">
+                                 <label class="widget-folder-label">
+                                 <input class="widget-folder-check input" checked type="checkbox">
+                                 <span>{{{icon "checkbox"}}}</span>
+                                 </label>
+                              </div>
+                              <div class="widget-folder-name widget-subname">
+                                 {{{icon "zones"}}}
+                                 <span>Zone 1</span>
+                              </div>
+                           </flex-box>
+                           
+                           <div class="widget-folder-icon">{{{icon "zones_arrow"}}}</div>
+                        </flex-box>
+                        <div class="widget-dropdown widget-list">
+                           <flex-box ai="center" jc="space-between" class="widget-folder widget-field">
+                              <flex-box ai="center" class="">
+                                 <div class="">
+                                    <label class="widget-folder-label">
+                                    <input class="widget-folder-check input" checked type="checkbox">
+                                    <span>{{{icon "checkbox"}}}</span>
+                                    </label>
+                                 </div>
+                                 <div class="widget-folder-name widget-subname">
+                                    {{{icon "camera"}}}
+                                    <div class="device-wrap" style="display: flex;flex-direction: column;">
+                                       <span>Zones</span>
+                                       <span class="widget-folder-device">Camera 1</span>
+                                    </div>
+                                 </div>
+                              </flex-box>
+                              <div class="widget-folder-connection connection connection-bad">
+                                 <flex-box ai="center">{{{icon "connection"}}} No connection</flex-box>
+                              </div>
+                              <div class="widget-folder-sensor">
+                                 <button class="widget-button">{{{icon "click"}}}</button>
+                              </div>
+                           </flex-box>
+                           <flex-box ai="center" jc="space-between" class="widget-folder widget-field">
+                              <flex-box ai="center" class="">
+                                 <div class="">
+                                    <label class="widget-folder-label">
+                                    <input class="widget-folder-check input" checked type="checkbox">
+                                    <span>{{{icon "checkbox"}}}</span>
+                                    </label>
+                                 </div>
+                                 <div class="widget-folder-name widget-subname">
+                                    {{{icon "camera"}}}
+                                    <div class="device-wrap" style="display: flex;flex-direction: column;">
+                                       <span>Zones</span>
+                                       <span class="widget-folder-device">Camera 1</span>
+                                    </div>
+                                 </div>
+                              </flex-box>
+                              <div class="widget-folder-connection connection connection-bad">
+                                 <flex-box ai="center">{{{icon "connection"}}} No connection</flex-box>
+                              </div>
+                              <div class="widget-folder-sensor">
+                                 <button class="widget-button">{{{icon "click"}}}</button>
+                              </div>
+                           </flex-box>
+                           <flex-box ai="center" jc="space-between" class="widget-folder widget-field">
+                              <flex-box ai="center" class="">
+                                 <div class="">
+                                    <label class="widget-folder-label">
+                                    <input class="widget-folder-check input" checked type="checkbox">
+                                    <span>{{{icon "checkbox"}}}</span>
+                                    </label>
+                                 </div>
+                                 <div class="widget-folder-name widget-subname">
+                                    {{{icon "camera"}}}
+                                    <div class="device-wrap" style="display: flex;flex-direction: column;">
+                                       <span>Zones</span>
+                                       <span class="widget-folder-device">Camera 1</span>
+                                    </div>
+                                 </div>
+                              </flex-box>
+                              <div class="widget-folder-connection connection connection-bad">
+                                 <flex-box ai="center">{{{icon "connection"}}} No connection</flex-box>
+                              </div>
+                              <div class="widget-folder-sensor">
+                                 <button class="widget-button">{{{icon "click"}}}</button>
+                              </div>
+                           </flex-box>
+
+                            <flex-box ai="center" jc="space-between" class="widget-folder widget-field">
+                              <flex-box ai="center" class="">
+                                 <div class="">
+                                    <label class="widget-folder-label">
+                                    <input class="widget-folder-check input" checked type="checkbox">
+                                    <span>{{{icon "checkbox"}}}</span>
+                                    </label>
+                                 </div>
+                                 <div class="widget-folder-name widget-subname">
+                                    {{{icon "camera"}}}
+                                    <div class="device-wrap" style="display: flex;flex-direction: column;">
+                                       <span>Zones</span>
+                                       <span class="widget-folder-device">Camera 1</span>
+                                    </div>
+                                 </div>
+                              </flex-box>
+                              <div class="widget-folder-connection connection connection-bad">
+                                 <flex-box ai="center">{{{icon "connection"}}} No connection</flex-box>
+                              </div>
+                              <div class="widget-folder-sensor">
+                                 <button class="widget-button">{{{icon "click"}}}</button>
+                              </div>
+                           </flex-box>
+                           <flex-box ai="center" jc="space-between" class="widget-folder widget-field">
+                              <flex-box ai="center" class="">
+                                 <div class="">
+                                    <label class="widget-folder-label">
+                                    <input class="widget-folder-check input" checked type="checkbox">
+                                    <span>{{{icon "checkbox"}}}</span>
+                                    </label>
+                                 </div>
+                                 <div class="widget-folder-name widget-subname">
+                                    {{{icon "camera"}}}
+                                    <div class="device-wrap" style="display: flex;flex-direction: column;">
+                                       <span>Zones</span>
+                                       <span class="widget-folder-device">Camera 1</span>
+                                    </div>
+                                 </div>
+                              </flex-box>
+                              <div class="widget-folder-connection connection connection-bad">
+                                 <flex-box ai="center">{{{icon "connection"}}} No connection</flex-box>
+                              </div>
+                              <div class="widget-folder-sensor">
+                                 <button class="widget-button">{{{icon "click"}}}</button>
+                              </div>
+                           </flex-box>
+                           <flex-box ai="center" jc="space-between" class="widget-folder widget-field">
+                              <flex-box ai="center" class="">
+                                 <div class="">
+                                    <label class="widget-folder-label">
+                                    <input class="widget-folder-check input" checked type="checkbox">
+                                    <span>{{{icon "checkbox"}}}</span>
+                                    </label>
+                                 </div>
+                                 <div class="widget-folder-name widget-subname">
+                                    {{{icon "camera"}}}
+                                    <div class="device-wrap" style="display: flex;flex-direction: column;">
+                                       <span>Zones</span>
+                                       <span class="widget-folder-device">Camera 1</span>
+                                    </div>
+                                 </div>
+                              </flex-box>
+                              <div class="widget-folder-connection connection connection-bad">
+                                 <flex-box ai="center">{{{icon "connection"}}} No connection</flex-box>
+                              </div>
+                              <div class="widget-folder-sensor">
+                                 <button class="widget-button">{{{icon "click"}}}</button>
+                              </div>
+                           </flex-box>
+                           <flex-box ai="center" jc="space-between" class="widget-folder widget-field">
+                              <flex-box ai="center" class="">
+                                 <div class="">
+                                    <label class="widget-folder-label">
+                                    <input class="widget-folder-check input" checked type="checkbox">
+                                    <span>{{{icon "checkbox"}}}</span>
+                                    </label>
+                                 </div>
+                                 <div class="widget-folder-name widget-subname">
+                                    {{{icon "camera"}}}
+                                    <div class="device-wrap" style="display: flex;flex-direction: column;">
+                                       <span>Zones</span>
+                                       <span class="widget-folder-device">Camera 1</span>
+                                    </div>
+                                 </div>
+                              </flex-box>
+                              <div class="widget-folder-connection connection connection-bad">
+                                 <flex-box ai="center">{{{icon "connection"}}} No connection</flex-box>
+                              </div>
+                              <div class="widget-folder-sensor">
+                                 <button class="widget-button">{{{icon "click"}}}</button>
+                              </div>
+                           </flex-box>
+
+                           <flex-box ai="center" jc="space-between" class="widget-folder widget-field">
+                              <flex-box ai="center" class="">
+                                 <div class="">
+                                    <label class="widget-folder-label">
+                                    <input class="widget-folder-check input" checked type="checkbox">
+                                    <span>{{{icon "checkbox"}}}</span>
+                                    </label>
+                                 </div>
+                                 <div class="widget-folder-name widget-subname">
+                                    {{{icon "camera"}}}
+                                    <div class="device-wrap" style="display: flex;flex-direction: column;">
+                                       <span>Zones</span>
+                                       <span class="widget-folder-device">Camera 1</span>
+                                    </div>
+                                 </div>
+                              </flex-box>
+                              <div class="widget-folder-connection connection connection-bad">
+                                 <flex-box ai="center">{{{icon "connection"}}} No connection</flex-box>
+                              </div>
+                              <div class="widget-folder-sensor">
+                                 <button class="widget-button">{{{icon "click"}}}</button>
+                              </div>
+                           </flex-box>
+                           <flex-box ai="center" jc="space-between" class="widget-folder widget-field">
+                              <flex-box ai="center" class="">
+                                 <div class="">
+                                    <label class="widget-folder-label">
+                                    <input class="widget-folder-check input" checked type="checkbox">
+                                    <span>{{{icon "checkbox"}}}</span>
+                                    </label>
+                                 </div>
+                                 <div class="widget-folder-name widget-subname">
+                                    {{{icon "camera"}}}
+                                    <div class="device-wrap" style="display: flex;flex-direction: column;">
+                                       <span>Zones</span>
+                                       <span class="widget-folder-device">Camera 1</span>
+                                    </div>
+                                 </div>
+                              </flex-box>
+                              <div class="widget-folder-connection connection connection-bad">
+                                 <flex-box ai="center">{{{icon "connection"}}} No connection</flex-box>
+                              </div>
+                              <div class="widget-folder-sensor">
+                                 <button class="widget-button">{{{icon "click"}}}</button>
+                              </div>
+                           </flex-box>
+                           <flex-box ai="center" jc="space-between" class="widget-folder widget-field">
+                              <flex-box ai="center" class="">
+                                 <div class="">
+                                    <label class="widget-folder-label">
+                                    <input class="widget-folder-check input" checked type="checkbox">
+                                    <span>{{{icon "checkbox"}}}</span>
+                                    </label>
+                                 </div>
+                                 <div class="widget-folder-name widget-subname">
+                                    {{{icon "camera"}}}
+                                    <div class="device-wrap" style="display: flex;flex-direction: column;">
+                                       <span>Zones</span>
+                                       <span class="widget-folder-device">Camera 1</span>
+                                    </div>
+                                 </div>
+                              </flex-box>
+                              <div class="widget-folder-connection connection connection-bad">
+                                 <flex-box ai="center">{{{icon "connection"}}} No connection</flex-box>
+                              </div>
+                              <div class="widget-folder-sensor">
+                                 <button class="widget-button">{{{icon "click"}}}</button>
+                              </div>
+                           </flex-box> <flex-box ai="center" jc="space-between" class="widget-folder widget-field">
+                              <flex-box ai="center" class="">
+                                 <div class="">
+                                    <label class="widget-folder-label">
+                                    <input class="widget-folder-check input" checked type="checkbox">
+                                    <span>{{{icon "checkbox"}}}</span>
+                                    </label>
+                                 </div>
+                                 <div class="widget-folder-name widget-subname">
+                                    {{{icon "camera"}}}
+                                    <div class="device-wrap" style="display: flex;flex-direction: column;">
+                                       <span>Zones</span>
+                                       <span class="widget-folder-device">Camera 1</span>
+                                    </div>
+                                 </div>
+                              </flex-box>
+                              <div class="widget-folder-connection connection connection-bad">
+                                 <flex-box ai="center">{{{icon "connection"}}} No connection</flex-box>
+                              </div>
+                              <div class="widget-folder-sensor">
+                                 <button class="widget-button">{{{icon "click"}}}</button>
+                              </div>
+                           </flex-box>
+                           <flex-box ai="center" jc="space-between" class="widget-folder widget-field">
+                              <flex-box ai="center" class="">
+                                 <div class="">
+                                    <label class="widget-folder-label">
+                                    <input class="widget-folder-check input" checked type="checkbox">
+                                    <span>{{{icon "checkbox"}}}</span>
+                                    </label>
+                                 </div>
+                                 <div class="widget-folder-name widget-subname">
+                                    {{{icon "camera"}}}
+                                    <div class="device-wrap" style="display: flex;flex-direction: column;">
+                                       <span>Zones</span>
+                                       <span class="widget-folder-device">Camera 1</span>
+                                    </div>
+                                 </div>
+                              </flex-box>
+                              <div class="widget-folder-connection connection connection-bad">
+                                 <flex-box ai="center">{{{icon "connection"}}} No connection</flex-box>
+                              </div>
+                              <div class="widget-folder-sensor">
+                                 <button class="widget-button">{{{icon "click"}}}</button>
+                              </div>
+                           </flex-box>
+
+                           <flex-box ai="center" jc="space-between" class="widget-folder widget-field">
+                              <flex-box ai="center" class="">
+                                 <div class="">
+                                    <label class="widget-folder-label">
+                                    <input class="widget-folder-check input" checked type="checkbox">
+                                    <span>{{{icon "checkbox"}}}</span>
+                                    </label>
+                                 </div>
+                                 <div class="widget-folder-name widget-subname">
+                                    {{{icon "sensor"}}}
+                                    <div class="device-wrap" style="display: flex;flex-direction: column;">
+                                       <span>Zones</span>
+                                       <span class="widget-folder-device">Camera 1</span>
+                                    </div>
+                                 </div>
+                              </flex-box>
+                              <div class="widget-folder-connection connection connection-average">
+                                 <flex-box ai="center">{{{icon "connection"}}} Connection</flex-box>
+                              </div>
+                              <div class="widget-folder-sensor">
+                                 <button class="widget-button">{{{icon "click"}}}</button>
+                              </div>
+                           </flex-box>
+                           <flex-box ai="center" jc="space-between" class="widget-folder widget-field">
+                              <flex-box ai="center" class="">
+                                 <div class="">
+                                    <label class="widget-folder-label">
+                                    <input class="widget-folder-check input" checked type="checkbox">
+                                    <span>{{{icon "checkbox"}}}</span>
+                                    </label>
+                                 </div>
+                                 <div class="widget-folder-name widget-subname">
+                                    {{{icon "camera"}}}
+                                    <div class="device-wrap" style="display: flex;flex-direction: column;">
+                                       <span>Zones</span>
+                                       <span class="widget-folder-device">Camera 1</span>
+                                    </div>
+                                 </div>
+                              </flex-box>
+                              <div class="widget-folder-connection connection connection-good">
+                                 <flex-box ai="center">{{{icon "connection"}}} Connection</flex-box>
+                              </div>
+                              <div class="widget-folder-sensor">
+                                 <button class="widget-button">{{{icon "click"}}}</button>
+                              </div>
+                           </flex-box>
+                        </div>
+                     </div>
+                     
+                  </div>
+               </div>
+               <div class="widget-wrap">
+                  <flex-box class="widget-folder" ai="center" jc="space-between">
+                     <flex-box ai="center" class="widget-folder-name">
+                        {{{icon "sites"}}}
+                        <span>Sites</span>
+                     </flex-box>
+                     <flex-box class="widget-folder-icon">
+                        {{{icon "zones_arrow"}}}
+                     </flex-box>
+                  </flex-box>
+              
+               </div>
+               <div class="widget-wrap">
+                  <flex-box class="widget-folder" ai="center" jc="space-between">
+                     <flex-box ai="center" class="widget-folder-name">
+                        {{{icon "placemark"}}}
+                        <span>Placemark</span>
+                     </flex-box>
+                     <flex-box class="widget-folder-icon">
+                        {{{icon "zones_arrow"}}}
+                     </flex-box>
+                  </flex-box>
+                        <div class="widget-dropdown widget-list">
+                     <div class="widget-container">
+                        <flex-box ai="center" jc="space-between" class="widget-folder widget-subfolder">
+                           <flex-box ai="center" class="">
+                              <div class="">
+                                 <label class="widget-folder-label">
+                                 <input class="widget-folder-check input" checked type="checkbox">
+                                 <span>{{{icon "checkbox"}}}</span>
+                                 </label>
+                              </div>
+                              <div class="widget-folder-name widget-subname">
+                                 {{{icon "zones"}}}
+                                 <span>Zone 1</span>
+                              </div>
+                           </flex-box>
+                           <div class="widget-folder-icon">{{{icon "zones_arrow"}}}</div>
+                        </flex-box>
+                     </div>
+                     <div class="widget-container">
+                        <flex-box ai="center" jc="space-between" class="widget-folder widget-subfolder">
+                           <flex-box ai="center" class="">
+                              <div class="">
+                                 <label class="widget-folder-label">
+                                 <input class="widget-folder-check input" checked type="checkbox">
+                                 <span>{{{icon "checkbox"}}}</span>
+                                 </label>
+                              </div>
+                              <div class="widget-folder-name widget-subname">
+                                 {{{icon "zones"}}}
+                                 <span>Zone 1</span>
+                              </div>
+                           </flex-box>
+                           <div class="widget-folder-icon">{{{icon "zones_arrow"}}}</div>
+                        </flex-box>
+                     </div>
+                     <div class="widget-container">
+                        <flex-box ai="center" jc="space-between" class="widget-folder widget-subfolder">
+                           <flex-box ai="center" class="">
+                              <div class="">
+                                 <label class="widget-folder-label">
+                                 <input class="widget-folder-check input" checked type="checkbox">
+                                 <span>{{{icon "checkbox"}}}</span>
+                                 </label>
+                              </div>
+                              <div class="widget-folder-name widget-subname">
+                                 {{{icon "zones"}}}
+                                 <span>Zone 1</span>
+                              </div>
+                           </flex-box>
+                           <div class="widget-folder-icon">{{{icon "zones_arrow"}}}</div>
+                        </flex-box>
+                        <div class="widget-dropdown widget-list">
+                           <flex-box ai="center" jc="space-between" class="widget-folder widget-field">
+                              <flex-box ai="center" class="">
+                                 <div class="">
+                                    <label class="widget-folder-label">
+                                    <input class="widget-folder-check input" checked type="checkbox">
+                                    <span>{{{icon "checkbox"}}}</span>
+                                    </label>
+                                 </div>
+                                 <div class="widget-folder-name widget-subname">
+                                    {{{icon "camera"}}}
+                                    <div class="device-wrap" style="display: flex;flex-direction: column;">
+                                       <span>Zones</span>
+                                       <span class="widget-folder-device">Camera 1</span>
+                                    </div>
+                                 </div>
+                              </flex-box>
+                              <div class="widget-folder-connection connection connection-bad">
+                                 <flex-box ai="center">{{{icon "connection"}}} No connection</flex-box>
+                              </div>
+                              <div class="widget-folder-sensor">
+                                 <button class="widget-button">{{{icon "click"}}}</button>
+                              </div>
+                           </flex-box>
+                           <flex-box ai="center" jc="space-between" class="widget-folder widget-field">
+                              <flex-box ai="center" class="">
+                                 <div class="">
+                                    <label class="widget-folder-label">
+                                    <input class="widget-folder-check input" checked type="checkbox">
+                                    <span>{{{icon "checkbox"}}}</span>
+                                    </label>
+                                 </div>
+                                 <div class="widget-folder-name widget-subname">
+                                    {{{icon "sensor"}}}
+                                    <div class="device-wrap" style="display: flex;flex-direction: column;">
+                                       <span>Zones</span>
+                                       <span class="widget-folder-device">Camera 1</span>
+                                    </div>
+                                 </div>
+                              </flex-box>
+                              <div class="widget-folder-connection connection connection-average">
+                                 <flex-box ai="center">{{{icon "connection"}}} Connection</flex-box>
+                              </div>
+                              <div class="widget-folder-sensor">
+                                 <button class="widget-button">{{{icon "click"}}}</button>
+                              </div>
+                           </flex-box>
+                           <flex-box ai="center" jc="space-between" class="widget-folder widget-field">
+                              <flex-box ai="center" class="">
+                                 <div class="">
+                                    <label class="widget-folder-label">
+                                    <input class="widget-folder-check input" checked type="checkbox">
+                                    <span>{{{icon "checkbox"}}}</span>
+                                    </label>
+                                 </div>
+                                 <div class="widget-folder-name widget-subname">
+                                    {{{icon "camera"}}}
+                                    <div class="device-wrap" style="display: flex;flex-direction: column;">
+                                       <span>Zones</span>
+                                       <span class="widget-folder-device">Camera 1</span>
+                                    </div>
+                                 </div>
+                              </flex-box>
+                              <div class="widget-folder-connection connection connection-good">
+                                 <flex-box ai="center">{{{icon "connection"}}} Connection</flex-box>
+                              </div>
+                              <div class="widget-folder-sensor">
+                                 <button class="widget-button">{{{icon "click"}}}</button>
+                              </div>
+                           </flex-box>
+                           <flex-box ai="center" jc="space-between" class="widget-folder widget-field">
+                              <flex-box ai="center" class="">
+                                 <div class="">
+                                    <label class="widget-folder-label">
+                                    <input class="widget-folder-check input" checked type="checkbox">
+                                    <span>{{{icon "checkbox"}}}</span>
+                                    </label>
+                                 </div>
+                                 <div class="widget-folder-name widget-subname">
+                                    {{{icon "camera"}}}
+                                    <div class="device-wrap" style="display: flex;flex-direction: column;">
+                                       <span>Zones</span>
+                                       <span class="widget-folder-device">Camera 1</span>
+                                    </div>
+                                 </div>
+                              </flex-box>
+                              <div class="widget-folder-connection connection connection-good">
+                                 <flex-box ai="center">{{{icon "connection"}}} Connection</flex-box>
+                              </div>
+                              <div class="widget-folder-sensor">
+                                 <button class="widget-button">{{{icon "click"}}}</button>
+                              </div>
+                           </flex-box>
+                           <flex-box ai="center" jc="space-between" class="widget-folder widget-field">
+                              <flex-box ai="center" class="">
+                                 <div class="">
+                                    <label class="widget-folder-label">
+                                    <input class="widget-folder-check input" checked type="checkbox">
+                                    <span>{{{icon "checkbox"}}}</span>
+                                    </label>
+                                 </div>
+                                 <div class="widget-folder-name widget-subname">
+                                    {{{icon "camera"}}}
+                                    <div class="device-wrap" style="display: flex;flex-direction: column;">
+                                       <span>Zones</span>
+                                       <span class="widget-folder-device">Camera 1</span>
+                                    </div>
+                                 </div>
+                              </flex-box>
+                              <div class="widget-folder-connection connection connection-good">
+                                 <flex-box ai="center">{{{icon "connection"}}} Connection</flex-box>
+                              </div>
+                              <div class="widget-folder-sensor">
+                                 <button class="widget-button">{{{icon "click"}}}</button>
+                              </div>
+                           </flex-box>
+                           <flex-box ai="center" jc="space-between" class="widget-folder widget-field">
+                              <flex-box ai="center" class="">
+                                 <div class="">
+                                    <label class="widget-folder-label">
+                                    <input class="widget-folder-check input" checked type="checkbox">
+                                    <span>{{{icon "checkbox"}}}</span>
+                                    </label>
+                                 </div>
+                                 <div class="widget-folder-name widget-subname">
+                                    {{{icon "camera"}}}
+                                    <div class="device-wrap" style="display: flex;flex-direction: column;">
+                                       <span>Zones</span>
+                                       <span class="widget-folder-device">Camera 1</span>
+                                    </div>
+                                 </div>
+                              </flex-box>
+                              <div class="widget-folder-connection connection connection-good">
+                                 <flex-box ai="center">{{{icon "connection"}}} Connection</flex-box>
+                              </div>
+                              <div class="widget-folder-sensor">
+                                 <button class="widget-button">{{{icon "click"}}}</button>
+                              </div>
+                           </flex-box>
+                           <flex-box ai="center" jc="space-between" class="widget-folder widget-field">
+                              <flex-box ai="center" class="">
+                                 <div class="">
+                                    <label class="widget-folder-label">
+                                    <input class="widget-folder-check input" checked type="checkbox">
+                                    <span>{{{icon "checkbox"}}}</span>
+                                    </label>
+                                 </div>
+                                 <div class="widget-folder-name widget-subname">
+                                    {{{icon "camera"}}}
+                                    <div class="device-wrap" style="display: flex;flex-direction: column;">
+                                       <span>Zones</span>
+                                       <span class="widget-folder-device">Camera 1</span>
+                                    </div>
+                                 </div>
+                              </flex-box>
+                              <div class="widget-folder-connection connection connection-good">
+                                 <flex-box ai="center">{{{icon "connection"}}} Connection</flex-box>
+                              </div>
+                              <div class="widget-folder-sensor">
+                                 <button class="widget-button">{{{icon "click"}}}</button>
+                              </div>
+                           </flex-box>
+                        </div>
+                     </div>
+                     <div class="widget-container">
+                        <flex-box ai="center" jc="space-between" class="widget-folder widget-subfolder">
+                           <flex-box ai="center" class="">
+                              <div class="">
+                                 <label class="widget-folder-label">
+                                 <input class="widget-folder-check input" checked type="checkbox">
+                                 <span>{{{icon "checkbox"}}}</span>
+                                 </label>
+                              </div>
+                              <div class="widget-folder-name widget-subname">
+                                 {{{icon "zones"}}}
+                                 <span>Zone 1</span>
+                              </div>
+                           </flex-box>
+                           <div class="widget-folder-icon">{{{icon "zones_arrow"}}}</div>
+                        </flex-box>
+                     </div>
+                     <div class="widget-container">
+                        <flex-box ai="center" jc="space-between" class="widget-folder widget-subfolder">
+                           <flex-box ai="center" class="">
+                              <div class="">
+                                 <label class="widget-folder-label">
+                                 <input class="widget-folder-check input" checked type="checkbox">
+                                 <span>{{{icon "checkbox"}}}</span>
+                                 </label>
+                              </div>
+                              <div class="widget-folder-name widget-subname">
+                                 {{{icon "zones"}}}
+                                 <span>Zone 1</span>
+                              </div>
+                           </flex-box>
+                           <div class="widget-folder-icon">{{{icon "zones_arrow"}}}</div>
+                        </flex-box>
+                     </div>
+                     <div class="widget-container">
+                        <flex-box ai="center" jc="space-between" class="widget-folder widget-subfolder">
+                           <flex-box ai="center" class="">
+                              <div class="">
+                                 <label class="widget-folder-label">
+                                 <input class="widget-folder-check input" checked type="checkbox">
+                                 <span>{{{icon "checkbox"}}}</span>
+                                 </label>
+                              </div>
+                              <div class="widget-folder-name widget-subname">
+                                 {{{icon "zones"}}}
+                                 <span>Zone 1</span>
+                              </div>
+                           </flex-box>
+                           <div class="widget-folder-icon">{{{icon "zones_arrow"}}}</div>
+                        </flex-box>
+                     </div>
+                  </div>
+               </div>
+               <div class="widget-wrap">
+                  <flex-box class="widget-folder" ai="center" jc="space-between">
+                     <flex-box ai="center" class="widget-folder-name">
+                        {{{icon "layers"}}}
+                        <span>Layers</span>
+                     </flex-box>
+                     <flex-box class="widget-folder-icon">
+                        {{{icon "zones_arrow"}}}
+                     </flex-box>
+                  </flex-box>
+                        <div class="widget-dropdown widget-list">
+                     <div class="widget-container">
+                        <flex-box ai="center" jc="space-between" class="widget-folder widget-subfolder">
+                           <flex-box ai="center" class="">
+                              <div class="">
+                                 <label class="widget-folder-label">
+                                 <input class="widget-folder-check input" checked type="checkbox">
+                                 <span>{{{icon "checkbox"}}}</span>
+                                 </label>
+                              </div>
+                              <div class="widget-folder-name widget-subname">
+                                 {{{icon "zones"}}}
+                                 <span>Zone 1</span>
+                              </div>
+                           </flex-box>
+                           <div class="widget-folder-icon">{{{icon "zones_arrow"}}}</div>
+                        </flex-box>
+                     </div>
+                     <div class="widget-container">
+                        <flex-box ai="center" jc="space-between" class="widget-folder widget-subfolder">
+                           <flex-box ai="center" class="">
+                              <div class="">
+                                 <label class="widget-folder-label">
+                                 <input class="widget-folder-check input" checked type="checkbox">
+                                 <span>{{{icon "checkbox"}}}</span>
+                                 </label>
+                              </div>
+                              <div class="widget-folder-name widget-subname">
+                                 {{{icon "zones"}}}
+                                 <span>Zone 1</span>
+                              </div>
+                           </flex-box>
+                           <div class="widget-folder-icon">{{{icon "zones_arrow"}}}</div>
+                        </flex-box>
+                     </div>
+                     <div class="widget-container">
+                        <flex-box ai="center" jc="space-between" class="widget-folder widget-subfolder">
+                           <flex-box ai="center" class="">
+                              <div class="">
+                                 <label class="widget-folder-label">
+                                 <input class="widget-folder-check input" checked type="checkbox">
+                                 <span>{{{icon "checkbox"}}}</span>
+                                 </label>
+                              </div>
+                              <div class="widget-folder-name widget-subname">
+                                 {{{icon "zones"}}}
+                                 <span>Zone 1</span>
+                              </div>
+                           </flex-box>
+                           <div class="widget-folder-icon">{{{icon "zones_arrow"}}}</div>
+                        </flex-box>
+                        <div class="widget-dropdown widget-list">
+                           <flex-box ai="center" jc="space-between" class="widget-folder widget-field">
+                              <flex-box ai="center" class="">
+                                 <div class="">
+                                    <label class="widget-folder-label">
+                                    <input class="widget-folder-check input" checked type="checkbox">
+                                    <span>{{{icon "checkbox"}}}</span>
+                                    </label>
+                                 </div>
+                                 <div class="widget-folder-name widget-subname">
+                                    {{{icon "camera"}}}
+                                    <div class="device-wrap" style="display: flex;flex-direction: column;">
+                                       <span>Zones</span>
+                                       <span class="widget-folder-device">Camera 1</span>
+                                    </div>
+                                 </div>
+                              </flex-box>
+                              <div class="widget-folder-connection connection connection-bad">
+                                 <flex-box ai="center">{{{icon "connection"}}} No connection</flex-box>
+                              </div>
+                              <div class="widget-folder-sensor">
+                                 <button class="widget-button">{{{icon "click"}}}</button>
+                              </div>
+                           </flex-box>
+                           <flex-box ai="center" jc="space-between" class="widget-folder widget-field">
+                              <flex-box ai="center" class="">
+                                 <div class="">
+                                    <label class="widget-folder-label">
+                                    <input class="widget-folder-check input" checked type="checkbox">
+                                    <span>{{{icon "checkbox"}}}</span>
+                                    </label>
+                                 </div>
+                                 <div class="widget-folder-name widget-subname">
+                                    {{{icon "sensor"}}}
+                                    <div class="device-wrap" style="display: flex;flex-direction: column;">
+                                       <span>Zones</span>
+                                       <span class="widget-folder-device">Camera 1</span>
+                                    </div>
+                                 </div>
+                              </flex-box>
+                              <div class="widget-folder-connection connection connection-average">
+                                 <flex-box ai="center">{{{icon "connection"}}} Connection</flex-box>
+                              </div>
+                              <div class="widget-folder-sensor">
+                                 <button class="widget-button">{{{icon "click"}}}</button>
+                              </div>
+                           </flex-box>
+                           <flex-box ai="center" jc="space-between" class="widget-folder widget-field">
+                              <flex-box ai="center" class="">
+                                 <div class="">
+                                    <label class="widget-folder-label">
+                                    <input class="widget-folder-check input" checked type="checkbox">
+                                    <span>{{{icon "checkbox"}}}</span>
+                                    </label>
+                                 </div>
+                                 <div class="widget-folder-name widget-subname">
+                                    {{{icon "camera"}}}
+                                    <div class="device-wrap" style="display: flex;flex-direction: column;">
+                                       <span>Zones</span>
+                                       <span class="widget-folder-device">Camera 1</span>
+                                    </div>
+                                 </div>
+                              </flex-box>
+                              <div class="widget-folder-connection connection connection-good">
+                                 <flex-box ai="center">{{{icon "connection"}}} Connection</flex-box>
+                              </div>
+                              <div class="widget-folder-sensor">
+                                 <button class="widget-button">{{{icon "click"}}}</button>
+                              </div>
+                           </flex-box>
+                           <flex-box ai="center" jc="space-between" class="widget-folder widget-field">
+                              <flex-box ai="center" class="">
+                                 <div class="">
+                                    <label class="widget-folder-label">
+                                    <input class="widget-folder-check input" checked type="checkbox">
+                                    <span>{{{icon "checkbox"}}}</span>
+                                    </label>
+                                 </div>
+                                 <div class="widget-folder-name widget-subname">
+                                    {{{icon "camera"}}}
+                                    <div class="device-wrap" style="display: flex;flex-direction: column;">
+                                       <span>Zones</span>
+                                       <span class="widget-folder-device">Camera 1</span>
+                                    </div>
+                                 </div>
+                              </flex-box>
+                              <div class="widget-folder-connection connection connection-good">
+                                 <flex-box ai="center">{{{icon "connection"}}} Connection</flex-box>
+                              </div>
+                              <div class="widget-folder-sensor">
+                                 <button class="widget-button">{{{icon "click"}}}</button>
+                              </div>
+                           </flex-box>
+                           <flex-box ai="center" jc="space-between" class="widget-folder widget-field">
+                              <flex-box ai="center" class="">
+                                 <div class="">
+                                    <label class="widget-folder-label">
+                                    <input class="widget-folder-check input" checked type="checkbox">
+                                    <span>{{{icon "checkbox"}}}</span>
+                                    </label>
+                                 </div>
+                                 <div class="widget-folder-name widget-subname">
+                                    {{{icon "camera"}}}
+                                    <div class="device-wrap" style="display: flex;flex-direction: column;">
+                                       <span>Zones</span>
+                                       <span class="widget-folder-device">Camera 1</span>
+                                    </div>
+                                 </div>
+                              </flex-box>
+                              <div class="widget-folder-connection connection connection-good">
+                                 <flex-box ai="center">{{{icon "connection"}}} Connection</flex-box>
+                              </div>
+                              <div class="widget-folder-sensor">
+                                 <button class="widget-button">{{{icon "click"}}}</button>
+                              </div>
+                           </flex-box>
+                           <flex-box ai="center" jc="space-between" class="widget-folder widget-field">
+                              <flex-box ai="center" class="">
+                                 <div class="">
+                                    <label class="widget-folder-label">
+                                    <input class="widget-folder-check input" checked type="checkbox">
+                                    <span>{{{icon "checkbox"}}}</span>
+                                    </label>
+                                 </div>
+                                 <div class="widget-folder-name widget-subname">
+                                    {{{icon "camera"}}}
+                                    <div class="device-wrap" style="display: flex;flex-direction: column;">
+                                       <span>Zones</span>
+                                       <span class="widget-folder-device">Camera 1</span>
+                                    </div>
+                                 </div>
+                              </flex-box>
+                              <div class="widget-folder-connection connection connection-good">
+                                 <flex-box ai="center">{{{icon "connection"}}} Connection</flex-box>
+                              </div>
+                              <div class="widget-folder-sensor">
+                                 <button class="widget-button">{{{icon "click"}}}</button>
+                              </div>
+                           </flex-box>
+                           <flex-box ai="center" jc="space-between" class="widget-folder widget-field">
+                              <flex-box ai="center" class="">
+                                 <div class="">
+                                    <label class="widget-folder-label">
+                                    <input class="widget-folder-check input" checked type="checkbox">
+                                    <span>{{{icon "checkbox"}}}</span>
+                                    </label>
+                                 </div>
+                                 <div class="widget-folder-name widget-subname">
+                                    {{{icon "camera"}}}
+                                    <div class="device-wrap" style="display: flex;flex-direction: column;">
+                                       <span>Zones</span>
+                                       <span class="widget-folder-device">Camera 1</span>
+                                    </div>
+                                 </div>
+                              </flex-box>
+                              <div class="widget-folder-connection connection connection-good">
+                                 <flex-box ai="center">{{{icon "connection"}}} Connection</flex-box>
+                              </div>
+                              <div class="widget-folder-sensor">
+                                 <button class="widget-button">{{{icon "click"}}}</button>
+                              </div>
+                           </flex-box>
+                        </div>
+                     </div>
+                     
+                  </div>
+               </div>
+            </div>
+            <!-- preloader -->
+            <div class="widget-preloader">
+               <div class="widget-preloader-icon">{{{icon "preloader"}}}</div>
+               <div class="widget-preloader-text">Loading</div>
+            </div>
+         </div>
+         <!-- button resize -->
+            <div class="widget-resize">
+                <button class="widget-resize-button widget-button">{{{icon "resize"}}}</button>
+            </div>
+      </div>
+      <!-- widget -->
+   <!-- widget drag -->
+   <div class=" widget-drag">
+      <flex-box class="widget-header" row gap="20px" ai="center" jc="space-between">
+         <div class="widget-header-name">Search Geo Objects</div>
+         <flex-box class="widget-header" row gap="20px" ai="center">
+            <button class="widget-header-button widget-button">{{{icon "minus"}}}</button>
+            <button class="widget-header-button widget-header-button-unpin widget-button">{{{icon "unpin"}}}</button>
+            <button class="widget-header-button widget-header-button-pin widget-button">{{{icon "pin"}}}</button>
+         </flex-box>
+      </flex-box>
+      <div class="widget-body">
+         <flex-box class="widget-wrap" row gap="20px" ai="center">
+            <!-- filter -->
+            <flex-box class="widget-filter" row gap="20px" ai="center" jc="space-between">
+               <button class="widget-button ">{{{icon "filter"}}}</button>
+               <flex-box class="widget-button-text" row gap="10px" ai="center">
+                  <span>Placemarks</span> <span>{{{icon "filter_arrow"}}}</span> 
+               </flex-box>
+            </flex-box>
+            <!-- search -->
+            <flex-box class="widget-search" row gap="20px" ai="center">
+               <input value="Search" class="widget-search-input" type="search" name="search" id="">
+               <label class="widget-search-label" for="search">
+                  <div class="widget-search-hidden">{{{icon "search"}}}</div>
+                  <div class="">{{{icon "cross"}}}</div>
+               </label>
+            </flex-box>
+         </flex-box>
+         <!-- result search -->
+         <div class="widget-result">
+            <div class="widget-wrap">
+               <flex-box class="widget-folder widget-folder-active" ai="center" jc="space-between">
+                  <flex-box ai="center" class="widget-folder-name">
+                     {{{icon "zones"}}}
+                     <span>Zones</span>
+                  </flex-box>
+                  <flex-box class="widget-folder-icon">
+                     {{{icon "zones_arrow"}}}
+                  </flex-box>
+               </flex-box>
+               <div class="widget-dropdown widget-list">
+                  <div class="widget-container">
+                     <flex-box ai="center" jc="space-between" class="widget-folder widget-subfolder">
+                        <flex-box ai="center" class="">
+                           <div class="">
+                              <label class="widget-folder-label">
+                              <input class="widget-folder-check input"  type="checkbox">
+                              <span>{{{icon "checkbox"}}}</span>
+                              </label>
+                           </div>
+                           <div class="widget-folder-name widget-subname">
+                              {{{icon "zones"}}}
+                              <span>Zone 1</span>
+                           </div>
+                        </flex-box>
+                        <div class="widget-folder-icon">{{{icon "zones_arrow"}}}</div>
+                     </flex-box>
+                  </div>
+                  <div class="widget-container">
+                     <flex-box ai="center" jc="space-between" class="widget-folder widget-subfolder">
+                        <flex-box ai="center" class="">
+                           <div class="">
+                              <label class="widget-folder-label">
+                              <input class="widget-folder-check input"  type="checkbox">
+                              <span>{{{icon "checkbox"}}}</span>
+                              </label>
+                           </div>
+                           <div class="widget-folder-name widget-subname">
+                              {{{icon "zones"}}}
+                              <span>Zone 1</span>
+                           </div>
+                        </flex-box>
+                        <div class="widget-folder-icon">{{{icon "zones_arrow"}}}</div>
+                     </flex-box>
+                  </div>
+                  <div class="widget-container">
+                     <flex-box ai="center" jc="space-between" class="widget-folder widget-subfolder widget-subfolder-active">
+                        <flex-box ai="center" class="">
+                           <div class="">
+                              <label class="widget-folder-label">
+                              <input class="widget-folder-check input"  type="checkbox">
+                              <span>{{{icon "checkbox"}}}</span>
+                              </label>
+                           </div>
+                           <div class="widget-folder-name widget-subname">
+                              {{{icon "zones"}}}
+                              <span>Zone 1</span>
+                           </div>
+                        </flex-box>
+                        <div class="widget-folder-icon">{{{icon "zones_arrow"}}}</div>
+                     </flex-box>
+                     <div class="widget-dropdown widget-list">
+                        <flex-box ai="center" jc="space-between" class="widget-folder widget-field">
+                           <flex-box ai="center" class="">
+                              <div class="">
+                                 <label class="widget-folder-label">
+                                 <input class="widget-folder-check input"  type="checkbox">
+                                 <span>{{{icon "checkbox"}}}</span>
+                                 </label>
+                              </div>
+                              <div class="widget-folder-name widget-subname">
+                                 {{{icon "camera"}}}
+                                 <div class="device-wrap" style="display: flex;flex-direction: column;">
+                                    <span>Zones</span>
+                                    <span class="widget-folder-device">Camera 1</span>
+                                 </div>
+                              </div>
+                           </flex-box>
+                           <div class="widget-folder-connection connection connection-bad">
+                              <flex-box ai="center">{{{icon "connection"}}} No connection</flex-box>
+                           </div>
+                           <div class="widget-folder-sensor">
+                              <button class="widget-button">{{{icon "click"}}}</button>
+                           </div>
+                        </flex-box>
+                        <flex-box ai="center" jc="space-between" class="widget-folder widget-field">
+                           <flex-box ai="center" class="">
+                              <div class="">
+                                 <label class="widget-folder-label">
+                                 <input class="widget-folder-check input" type="checkbox">
+                                 <span>{{{icon "checkbox"}}}</span>
+                                 </label>
+                              </div>
+                              <div class="widget-folder-name widget-subname">
+                                 {{{icon "sensor"}}}
+                                 <div class="device-wrap" style="display: flex;flex-direction: column;">
+                                    <span>Zones</span>
+                                    <span class="widget-folder-device">Camera 1</span>
+                                 </div>
+                              </div>
+                           </flex-box>
+                           <div class="widget-folder-connection connection connection-average">
+                              <flex-box ai="center">{{{icon "connection"}}} Connection</flex-box>
+                           </div>
+                           <div class="widget-folder-sensor">
+                              <button class="widget-button">{{{icon "click"}}}</button>
+                           </div>
+                        </flex-box>
+                        <flex-box ai="center" jc="space-between" class="widget-folder widget-field">
+                           <flex-box ai="center" class="">
+                              <div class="">
+                                 <label class="widget-folder-label">
+                                 <input class="widget-folder-check input" type="checkbox">
+                                 <span>{{{icon "checkbox"}}}</span>
+                                 </label>
+                              </div>
+                              <div class="widget-folder-name widget-subname">
+                                 {{{icon "camera"}}}
+                                 <div class="device-wrap" style="display: flex;flex-direction: column;">
+                                    <span>Zones</span>
+                                    <span class="widget-folder-device">Camera 1</span>
+                                 </div>
+                              </div>
+                           </flex-box>
+                           <div class="widget-folder-connection connection connection-good">
+                              <flex-box ai="center">{{{icon "connection"}}} Connection</flex-box>
+                           </div>
+                           <div class="widget-folder-sensor">
+                              <button class="widget-button">{{{icon "click"}}}</button>
+                           </div>
+                        </flex-box>
+                     </div>
+                  </div>
+                  
+               </div>
+            </div>
+            <div class="widget-wrap">
+               <flex-box class="widget-folder" ai="center" jc="space-between">
+                  <flex-box ai="center" class="widget-folder-name">
+                     {{{icon "sites"}}}
+                     <span>Sites</span>
+                  </flex-box>
+                  <flex-box class="widget-folder-icon">
+                     {{{icon "zones_arrow"}}}
+                  </flex-box>
+               </flex-box>
+               <div class="widget-dropdown widget-list">
+                  <div class="widget-container">
+                     <flex-box ai="center" jc="space-between" class="widget-folder widget-subfolder">
+                        <flex-box ai="center" class="">
+                           <div class="">
+                              <label class="widget-folder-label">
+                              <input class="widget-folder-check input" checked type="checkbox">
+                              <span>{{{icon "checkbox"}}}</span>
+                              </label>
+                           </div>
+                           <div class="widget-folder-name widget-subname">
+                              {{{icon "zones"}}}
+                              <span>Zone 1</span>
+                           </div>
+                        </flex-box>
+                        <div class="widget-folder-icon">{{{icon "zones_arrow"}}}</div>
+                     </flex-box>
+                  </div>
+                  <div class="widget-container">
+                     <flex-box ai="center" jc="space-between" class="widget-folder widget-subfolder">
+                        <flex-box ai="center" class="">
+                           <div class="">
+                              <label class="widget-folder-label">
+                              <input class="widget-folder-check input" checked type="checkbox">
+                              <span>{{{icon "checkbox"}}}</span>
+                              </label>
+                           </div>
+                           <div class="widget-folder-name widget-subname">
+                              {{{icon "zones"}}}
+                              <span>Zone 1</span>
+                           </div>
+                        </flex-box>
+                        <div class="widget-folder-icon">{{{icon "zones_arrow"}}}</div>
+                     </flex-box>
+                  </div>
+                  <div class="widget-container">
+                     <flex-box ai="center" jc="space-between" class="widget-folder widget-subfolder ">
+                        <flex-box ai="center" class="">
+                           <div class="">
+                              <label class="widget-folder-label">
+                              <input class="widget-folder-check input" checked type="checkbox">
+                              <span>{{{icon "checkbox"}}}</span>
+                              </label>
+                           </div>
+                           <div class="widget-folder-name widget-subname">
+                              {{{icon "zones"}}}
+                              <span>Zone 1</span>
+                           </div>
+                        </flex-box>
+                        <div class="widget-folder-icon">{{{icon "zones_arrow"}}}</div>
+                     </flex-box>
+                     <div class="widget-dropdown widget-list">
+                        <flex-box ai="center" jc="space-between" class="widget-folder widget-field">
+                           <flex-box ai="center" class="">
+                              <div class="">
+                                 <label class="widget-folder-label">
+                                 <input class="widget-folder-check input" checked type="checkbox">
+                                 <span>{{{icon "checkbox"}}}</span>
+                                 </label>
+                              </div>
+                              <div class="widget-folder-name widget-subname">
+                                 {{{icon "camera"}}}
+                                 <div class="device-wrap" style="display: flex;flex-direction: column;">
+                                    <span>Zones</span>
+                                    <span class="widget-folder-device">Camera 1</span>
+                                 </div>
+                              </div>
+                           </flex-box>
+                           <div class="widget-folder-connection connection connection-bad">
+                              <flex-box ai="center">{{{icon "connection"}}} No connection</flex-box>
+                           </div>
+                           <div class="widget-folder-sensor">
+                              <button class="widget-button">{{{icon "click"}}}</button>
+                           </div>
+                        </flex-box>
+                        <flex-box ai="center" jc="space-between" class="widget-folder widget-field">
+                           <flex-box ai="center" class="">
+                              <div class="">
+                                 <label class="widget-folder-label">
+                                 <input class="widget-folder-check input" checked type="checkbox">
+                                 <span>{{{icon "checkbox"}}}</span>
+                                 </label>
+                              </div>
+                              <div class="widget-folder-name widget-subname">
+                                 {{{icon "sensor"}}}
+                                 <div class="device-wrap" style="display: flex;flex-direction: column;">
+                                    <span>Zones</span>
+                                    <span class="widget-folder-device">Camera 1</span>
+                                 </div>
+                              </div>
+                           </flex-box>
+                           <div class="widget-folder-connection connection connection-average">
+                              <flex-box ai="center">{{{icon "connection"}}} Connection</flex-box>
+                           </div>
+                           <div class="widget-folder-sensor">
+                              <button class="widget-button">{{{icon "click"}}}</button>
+                           </div>
+                        </flex-box>
+                        <flex-box ai="center" jc="space-between" class="widget-folder widget-field">
+                           <flex-box ai="center" class="">
+                              <div class="">
+                                 <label class="widget-folder-label">
+                                 <input class="widget-folder-check input" checked type="checkbox">
+                                 <span>{{{icon "checkbox"}}}</span>
+                                 </label>
+                              </div>
+                              <div class="widget-folder-name widget-subname">
+                                 {{{icon "camera"}}}
+                                 <div class="device-wrap" style="display: flex;flex-direction: column;">
+                                    <span>Zones</span>
+                                    <span class="widget-folder-device">Camera 1</span>
+                                 </div>
+                              </div>
+                           </flex-box>
+                           <div class="widget-folder-connection connection connection-good">
+                              <flex-box ai="center">{{{icon "connection"}}} Connection</flex-box>
+                           </div>
+                           <div class="widget-folder-sensor">
+                              <button class="widget-button">{{{icon "click"}}}</button>
+                           </div>
+                        </flex-box>
+                        <flex-box ai="center" jc="space-between" class="widget-folder widget-field">
+                           <flex-box ai="center" class="">
+                              <div class="">
+                                 <label class="widget-folder-label">
+                                 <input class="widget-folder-check input" checked type="checkbox">
+                                 <span>{{{icon "checkbox"}}}</span>
+                                 </label>
+                              </div>
+                              <div class="widget-folder-name widget-subname">
+                                 {{{icon "camera"}}}
+                                 <div class="device-wrap" style="display: flex;flex-direction: column;">
+                                    <span>Zones</span>
+                                    <span class="widget-folder-device">Camera 1</span>
+                                 </div>
+                              </div>
+                           </flex-box>
+                           <div class="widget-folder-connection connection connection-good">
+                              <flex-box ai="center">{{{icon "connection"}}} Connection</flex-box>
+                           </div>
+                           <div class="widget-folder-sensor">
+                              <button class="widget-button">{{{icon "click"}}}</button>
+                           </div>
+                        </flex-box>
+                        <flex-box ai="center" jc="space-between" class="widget-folder widget-field">
+                           <flex-box ai="center" class="">
+                              <div class="">
+                                 <label class="widget-folder-label">
+                                 <input class="widget-folder-check input" checked type="checkbox">
+                                 <span>{{{icon "checkbox"}}}</span>
+                                 </label>
+                              </div>
+                              <div class="widget-folder-name widget-subname">
+                                 {{{icon "camera"}}}
+                                 <div class="device-wrap" style="display: flex;flex-direction: column;">
+                                    <span>Zones</span>
+                                    <span class="widget-folder-device">Camera 1</span>
+                                 </div>
+                              </div>
+                           </flex-box>
+                           <div class="widget-folder-connection connection connection-good">
+                              <flex-box ai="center">{{{icon "connection"}}} Connection</flex-box>
+                           </div>
+                           <div class="widget-folder-sensor">
+                              <button class="widget-button">{{{icon "click"}}}</button>
+                           </div>
+                        </flex-box>
+                        <flex-box ai="center" jc="space-between" class="widget-folder widget-field">
+                           <flex-box ai="center" class="">
+                              <div class="">
+                                 <label class="widget-folder-label">
+                                 <input class="widget-folder-check input" checked type="checkbox">
+                                 <span>{{{icon "checkbox"}}}</span>
+                                 </label>
+                              </div>
+                              <div class="widget-folder-name widget-subname">
+                                 {{{icon "camera"}}}
+                                 <div class="device-wrap" style="display: flex;flex-direction: column;">
+                                    <span>Zones</span>
+                                    <span class="widget-folder-device">Camera 1</span>
+                                 </div>
+                              </div>
+                           </flex-box>
+                           <div class="widget-folder-connection connection connection-good">
+                              <flex-box ai="center">{{{icon "connection"}}} Connection</flex-box>
+                           </div>
+                           <div class="widget-folder-sensor">
+                              <button class="widget-button">{{{icon "click"}}}</button>
+                           </div>
+                        </flex-box>
+                        <flex-box ai="center" jc="space-between" class="widget-folder widget-field">
+                           <flex-box ai="center" class="">
+                              <div class="">
+                                 <label class="widget-folder-label">
+                                 <input class="widget-folder-check input" checked type="checkbox">
+                                 <span>{{{icon "checkbox"}}}</span>
+                                 </label>
+                              </div>
+                              <div class="widget-folder-name widget-subname">
+                                 {{{icon "camera"}}}
+                                 <div class="device-wrap" style="display: flex;flex-direction: column;">
+                                    <span>Zones</span>
+                                    <span class="widget-folder-device">Camera 1</span>
+                                 </div>
+                              </div>
+                           </flex-box>
+                           <div class="widget-folder-connection connection connection-good">
+                              <flex-box ai="center">{{{icon "connection"}}} Connection</flex-box>
+                           </div>
+                           <div class="widget-folder-sensor">
+                              <button class="widget-button">{{{icon "click"}}}</button>
+                           </div>
+                        </flex-box>
+                     </div>
+                  </div>
+                  
+               </div>
+            </div>
+            <div class="widget-wrap">
+               <flex-box class="widget-folder" ai="center" jc="space-between">
+                  <flex-box ai="center" class="widget-folder-name">
+                     {{{icon "placemark"}}}
+                     <span>Placemark</span>
+                  </flex-box>
+                  <flex-box class="widget-folder-icon">
+                     {{{icon "zones_arrow"}}}
+                  </flex-box>
+               </flex-box>
+                     <div class="widget-dropdown widget-list">
+                  <div class="widget-container">
+                     <flex-box ai="center" jc="space-between" class="widget-folder widget-subfolder">
+                        <flex-box ai="center" class="">
+                           <div class="">
+                              <label class="widget-folder-label">
+                              <input class="widget-folder-check input" checked type="checkbox">
+                              <span>{{{icon "checkbox"}}}</span>
+                              </label>
+                           </div>
+                           <div class="widget-folder-name widget-subname">
+                              {{{icon "zones"}}}
+                              <span>Zone 1</span>
+                           </div>
+                        </flex-box>
+                        <div class="widget-folder-icon">{{{icon "zones_arrow"}}}</div>
+                     </flex-box>
+                  </div>
+                  <div class="widget-container">
+                     <flex-box ai="center" jc="space-between" class="widget-folder widget-subfolder">
+                        <flex-box ai="center" class="">
+                           <div class="">
+                              <label class="widget-folder-label">
+                              <input class="widget-folder-check input" checked type="checkbox">
+                              <span>{{{icon "checkbox"}}}</span>
+                              </label>
+                           </div>
+                           <div class="widget-folder-name widget-subname">
+                              {{{icon "zones"}}}
+                              <span>Zone 1</span>
+                           </div>
+                        </flex-box>
+                        <div class="widget-folder-icon">{{{icon "zones_arrow"}}}</div>
+                     </flex-box>
+                  </div>
+                  <div class="widget-container">
+                     <flex-box ai="center" jc="space-between" class="widget-folder widget-subfolder ">
+                        <flex-box ai="center" class="">
+                           <div class="">
+                              <label class="widget-folder-label">
+                              <input class="widget-folder-check input" checked type="checkbox">
+                              <span>{{{icon "checkbox"}}}</span>
+                              </label>
+                           </div>
+                           <div class="widget-folder-name widget-subname">
+                              {{{icon "zones"}}}
+                              <span>Zone 1</span>
+                           </div>
+                        </flex-box>
+                        <div class="widget-folder-icon">{{{icon "zones_arrow"}}}</div>
+                     </flex-box>
+                     <div class="widget-dropdown widget-list">
+                        <flex-box ai="center" jc="space-between" class="widget-folder widget-field">
+                           <flex-box ai="center" class="">
+                              <div class="">
+                                 <label class="widget-folder-label">
+                                 <input class="widget-folder-check input" checked type="checkbox">
+                                 <span>{{{icon "checkbox"}}}</span>
+                                 </label>
+                              </div>
+                              <div class="widget-folder-name widget-subname">
+                                 {{{icon "camera"}}}
+                                 <div class="device-wrap" style="display: flex;flex-direction: column;">
+                                    <span>Zones</span>
+                                    <span class="widget-folder-device">Camera 1</span>
+                                 </div>
+                              </div>
+                           </flex-box>
+                           <div class="widget-folder-connection connection connection-bad">
+                              <flex-box ai="center">{{{icon "connection"}}} No connection</flex-box>
+                           </div>
+                           <div class="widget-folder-sensor">
+                              <button class="widget-button">{{{icon "click"}}}</button>
+                           </div>
+                        </flex-box>
+                        <flex-box ai="center" jc="space-between" class="widget-folder widget-field">
+                           <flex-box ai="center" class="">
+                              <div class="">
+                                 <label class="widget-folder-label">
+                                 <input class="widget-folder-check input" checked type="checkbox">
+                                 <span>{{{icon "checkbox"}}}</span>
+                                 </label>
+                              </div>
+                              <div class="widget-folder-name widget-subname">
+                                 {{{icon "sensor"}}}
+                                 <div class="device-wrap" style="display: flex;flex-direction: column;">
+                                    <span>Zones</span>
+                                    <span class="widget-folder-device">Camera 1</span>
+                                 </div>
+                              </div>
+                           </flex-box>
+                           <div class="widget-folder-connection connection connection-average">
+                              <flex-box ai="center">{{{icon "connection"}}} Connection</flex-box>
+                           </div>
+                           <div class="widget-folder-sensor">
+                              <button class="widget-button">{{{icon "click"}}}</button>
+                           </div>
+                        </flex-box>
+                        <flex-box ai="center" jc="space-between" class="widget-folder widget-field">
+                           <flex-box ai="center" class="">
+                              <div class="">
+                                 <label class="widget-folder-label">
+                                 <input class="widget-folder-check input" checked type="checkbox">
+                                 <span>{{{icon "checkbox"}}}</span>
+                                 </label>
+                              </div>
+                              <div class="widget-folder-name widget-subname">
+                                 {{{icon "camera"}}}
+                                 <div class="device-wrap" style="display: flex;flex-direction: column;">
+                                    <span>Zones</span>
+                                    <span class="widget-folder-device">Camera 1</span>
+                                 </div>
+                              </div>
+                           </flex-box>
+                           <div class="widget-folder-connection connection connection-good">
+                              <flex-box ai="center">{{{icon "connection"}}} Connection</flex-box>
+                           </div>
+                           <div class="widget-folder-sensor">
+                              <button class="widget-button">{{{icon "click"}}}</button>
+                           </div>
+                        </flex-box>
+                        <flex-box ai="center" jc="space-between" class="widget-folder widget-field">
+                           <flex-box ai="center" class="">
+                              <div class="">
+                                 <label class="widget-folder-label">
+                                 <input class="widget-folder-check input" checked type="checkbox">
+                                 <span>{{{icon "checkbox"}}}</span>
+                                 </label>
+                              </div>
+                              <div class="widget-folder-name widget-subname">
+                                 {{{icon "camera"}}}
+                                 <div class="device-wrap" style="display: flex;flex-direction: column;">
+                                    <span>Zones</span>
+                                    <span class="widget-folder-device">Camera 1</span>
+                                 </div>
+                              </div>
+                           </flex-box>
+                           <div class="widget-folder-connection connection connection-good">
+                              <flex-box ai="center">{{{icon "connection"}}} Connection</flex-box>
+                           </div>
+                           <div class="widget-folder-sensor">
+                              <button class="widget-button">{{{icon "click"}}}</button>
+                           </div>
+                        </flex-box>
+                        <flex-box ai="center" jc="space-between" class="widget-folder widget-field">
+                           <flex-box ai="center" class="">
+                              <div class="">
+                                 <label class="widget-folder-label">
+                                 <input class="widget-folder-check input" checked type="checkbox">
+                                 <span>{{{icon "checkbox"}}}</span>
+                                 </label>
+                              </div>
+                              <div class="widget-folder-name widget-subname">
+                                 {{{icon "camera"}}}
+                                 <div class="device-wrap" style="display: flex;flex-direction: column;">
+                                    <span>Zones</span>
+                                    <span class="widget-folder-device">Camera 1</span>
+                                 </div>
+                              </div>
+                           </flex-box>
+                           <div class="widget-folder-connection connection connection-good">
+                              <flex-box ai="center">{{{icon "connection"}}} Connection</flex-box>
+                           </div>
+                           <div class="widget-folder-sensor">
+                              <button class="widget-button">{{{icon "click"}}}</button>
+                           </div>
+                        </flex-box>
+                        <flex-box ai="center" jc="space-between" class="widget-folder widget-field">
+                           <flex-box ai="center" class="">
+                              <div class="">
+                                 <label class="widget-folder-label">
+                                 <input class="widget-folder-check input" checked type="checkbox">
+                                 <span>{{{icon "checkbox"}}}</span>
+                                 </label>
+                              </div>
+                              <div class="widget-folder-name widget-subname">
+                                 {{{icon "camera"}}}
+                                 <div class="device-wrap" style="display: flex;flex-direction: column;">
+                                    <span>Zones</span>
+                                    <span class="widget-folder-device">Camera 1</span>
+                                 </div>
+                              </div>
+                           </flex-box>
+                           <div class="widget-folder-connection connection connection-good">
+                              <flex-box ai="center">{{{icon "connection"}}} Connection</flex-box>
+                           </div>
+                           <div class="widget-folder-sensor">
+                              <button class="widget-button">{{{icon "click"}}}</button>
+                           </div>
+                        </flex-box>
+                        <flex-box ai="center" jc="space-between" class="widget-folder widget-field">
+                           <flex-box ai="center" class="">
+                              <div class="">
+                                 <label class="widget-folder-label">
+                                 <input class="widget-folder-check input" checked type="checkbox">
+                                 <span>{{{icon "checkbox"}}}</span>
+                                 </label>
+                              </div>
+                              <div class="widget-folder-name widget-subname">
+                                 {{{icon "camera"}}}
+                                 <div class="device-wrap" style="display: flex;flex-direction: column;">
+                                    <span>Zones</span>
+                                    <span class="widget-folder-device">Camera 1</span>
+                                 </div>
+                              </div>
+                           </flex-box>
+                           <div class="widget-folder-connection connection connection-good">
+                              <flex-box ai="center">{{{icon "connection"}}} Connection</flex-box>
+                           </div>
+                           <div class="widget-folder-sensor">
+                              <button class="widget-button">{{{icon "click"}}}</button>
+                           </div>
+                        </flex-box>
+                     </div>
+                  </div>
+                  <div class="widget-container">
+                     <flex-box ai="center" jc="space-between" class="widget-folder widget-subfolder">
+                        <flex-box ai="center" class="">
+                           <div class="">
+                              <label class="widget-folder-label">
+                              <input class="widget-folder-check input" checked type="checkbox">
+                              <span>{{{icon "checkbox"}}}</span>
+                              </label>
+                           </div>
+                           <div class="widget-folder-name widget-subname">
+                              {{{icon "zones"}}}
+                              <span>Zone 1</span>
+                           </div>
+                        </flex-box>
+                        <div class="widget-folder-icon">{{{icon "zones_arrow"}}}</div>
+                     </flex-box>
+                  </div>
+                  <div class="widget-container">
+                     <flex-box ai="center" jc="space-between" class="widget-folder widget-subfolder">
+                        <flex-box ai="center" class="">
+                           <div class="">
+                              <label class="widget-folder-label">
+                              <input class="widget-folder-check input" checked type="checkbox">
+                              <span>{{{icon "checkbox"}}}</span>
+                              </label>
+                           </div>
+                           <div class="widget-folder-name widget-subname">
+                              {{{icon "zones"}}}
+                              <span>Zone 1</span>
+                           </div>
+                        </flex-box>
+                        <div class="widget-folder-icon">{{{icon "zones_arrow"}}}</div>
+                     </flex-box>
+                  </div>
+                  <div class="widget-container">
+                     <flex-box ai="center" jc="space-between" class="widget-folder widget-subfolder">
+                        <flex-box ai="center" class="">
+                           <div class="">
+                              <label class="widget-folder-label">
+                              <input class="widget-folder-check input" checked type="checkbox">
+                              <span>{{{icon "checkbox"}}}</span>
+                              </label>
+                           </div>
+                           <div class="widget-folder-name widget-subname">
+                              {{{icon "zones"}}}
+                              <span>Zone 1</span>
+                           </div>
+                        </flex-box>
+                        <div class="widget-folder-icon">{{{icon "zones_arrow"}}}</div>
+                     </flex-box>
+                  </div>
+               </div>
+            </div>
+            <div class="widget-wrap">
+               <flex-box class="widget-folder" ai="center" jc="space-between">
+                  <flex-box ai="center" class="widget-folder-name">
+                     {{{icon "layers"}}}
+                     <span>Layers</span>
+                  </flex-box>
+                  <flex-box class="widget-folder-icon">
+                     {{{icon "zones_arrow"}}}
+                  </flex-box>
+               </flex-box>
+                     <div class="widget-dropdown widget-list">
+                  <div class="widget-container">
+                     <flex-box ai="center" jc="space-between" class="widget-folder widget-subfolder">
+                        <flex-box ai="center" class="">
+                           <div class="">
+                              <label class="widget-folder-label">
+                              <input class="widget-folder-check input" checked type="checkbox">
+                              <span>{{{icon "checkbox"}}}</span>
+                              </label>
+                           </div>
+                           <div class="widget-folder-name widget-subname">
+                              {{{icon "zones"}}}
+                              <span>Zone 1</span>
+                           </div>
+                        </flex-box>
+                        <div class="widget-folder-icon">{{{icon "zones_arrow"}}}</div>
+                     </flex-box>
+                  </div>
+                  <div class="widget-container">
+                     <flex-box ai="center" jc="space-between" class="widget-folder widget-subfolder">
+                        <flex-box ai="center" class="">
+                           <div class="">
+                              <label class="widget-folder-label">
+                              <input class="widget-folder-check input" checked type="checkbox">
+                              <span>{{{icon "checkbox"}}}</span>
+                              </label>
+                           </div>
+                           <div class="widget-folder-name widget-subname">
+                              {{{icon "zones"}}}
+                              <span>Zone 1</span>
+                           </div>
+                        </flex-box>
+                        <div class="widget-folder-icon">{{{icon "zones_arrow"}}}</div>
+                     </flex-box>
+                  </div>
+                  <div class="widget-container">
+                     <flex-box ai="center" jc="space-between" class="widget-folder widget-subfolder ">
+                        <flex-box ai="center" class="">
+                           <div class="">
+                              <label class="widget-folder-label">
+                              <input class="widget-folder-check input" checked type="checkbox">
+                              <span>{{{icon "checkbox"}}}</span>
+                              </label>
+                           </div>
+                           <div class="widget-folder-name widget-subname">
+                              {{{icon "zones"}}}
+                              <span>Zone 1</span>
+                           </div>
+                        </flex-box>
+                        <div class="widget-folder-icon">{{{icon "zones_arrow"}}}</div>
+                     </flex-box>
+                     <div class="widget-dropdown widget-list">
+                        <flex-box ai="center" jc="space-between" class="widget-folder widget-field">
+                           <flex-box ai="center" class="">
+                              <div class="">
+                                 <label class="widget-folder-label">
+                                 <input class="widget-folder-check input" checked type="checkbox">
+                                 <span>{{{icon "checkbox"}}}</span>
+                                 </label>
+                              </div>
+                              <div class="widget-folder-name widget-subname">
+                                 {{{icon "camera"}}}
+                                 <div class="device-wrap" style="display: flex;flex-direction: column;">
+                                    <span>Zones</span>
+                                    <span class="widget-folder-device">Camera 1</span>
+                                 </div>
+                              </div>
+                           </flex-box>
+                           <div class="widget-folder-connection connection connection-bad">
+                              <flex-box ai="center">{{{icon "connection"}}} No connection</flex-box>
+                           </div>
+                           <div class="widget-folder-sensor">
+                              <button class="widget-button">{{{icon "click"}}}</button>
+                           </div>
+                        </flex-box>
+                        <flex-box ai="center" jc="space-between" class="widget-folder widget-field">
+                           <flex-box ai="center" class="">
+                              <div class="">
+                                 <label class="widget-folder-label">
+                                 <input class="widget-folder-check input" checked type="checkbox">
+                                 <span>{{{icon "checkbox"}}}</span>
+                                 </label>
+                              </div>
+                              <div class="widget-folder-name widget-subname">
+                                 {{{icon "sensor"}}}
+                                 <div class="device-wrap" style="display: flex;flex-direction: column;">
+                                    <span>Zones</span>
+                                    <span class="widget-folder-device">Camera 1</span>
+                                 </div>
+                              </div>
+                           </flex-box>
+                           <div class="widget-folder-connection connection connection-average">
+                              <flex-box ai="center">{{{icon "connection"}}} Connection</flex-box>
+                           </div>
+                           <div class="widget-folder-sensor">
+                              <button class="widget-button">{{{icon "click"}}}</button>
+                           </div>
+                        </flex-box>
+                        <flex-box ai="center" jc="space-between" class="widget-folder widget-field">
+                           <flex-box ai="center" class="">
+                              <div class="">
+                                 <label class="widget-folder-label">
+                                 <input class="widget-folder-check input" checked type="checkbox">
+                                 <span>{{{icon "checkbox"}}}</span>
+                                 </label>
+                              </div>
+                              <div class="widget-folder-name widget-subname">
+                                 {{{icon "camera"}}}
+                                 <div class="device-wrap" style="display: flex;flex-direction: column;">
+                                    <span>Zones</span>
+                                    <span class="widget-folder-device">Camera 1</span>
+                                 </div>
+                              </div>
+                           </flex-box>
+                           <div class="widget-folder-connection connection connection-good">
+                              <flex-box ai="center">{{{icon "connection"}}} Connection</flex-box>
+                           </div>
+                           <div class="widget-folder-sensor">
+                              <button class="widget-button">{{{icon "click"}}}</button>
+                           </div>
+                        </flex-box>
+                        <flex-box ai="center" jc="space-between" class="widget-folder widget-field">
+                           <flex-box ai="center" class="">
+                              <div class="">
+                                 <label class="widget-folder-label">
+                                 <input class="widget-folder-check input" checked type="checkbox">
+                                 <span>{{{icon "checkbox"}}}</span>
+                                 </label>
+                              </div>
+                              <div class="widget-folder-name widget-subname">
+                                 {{{icon "camera"}}}
+                                 <div class="device-wrap" style="display: flex;flex-direction: column;">
+                                    <span>Zones</span>
+                                    <span class="widget-folder-device">Camera 1</span>
+                                 </div>
+                              </div>
+                           </flex-box>
+                           <div class="widget-folder-connection connection connection-good">
+                              <flex-box ai="center">{{{icon "connection"}}} Connection</flex-box>
+                           </div>
+                           <div class="widget-folder-sensor">
+                              <button class="widget-button">{{{icon "click"}}}</button>
+                           </div>
+                        </flex-box>
+                        <flex-box ai="center" jc="space-between" class="widget-folder widget-field">
+                           <flex-box ai="center" class="">
+                              <div class="">
+                                 <label class="widget-folder-label">
+                                 <input class="widget-folder-check input" checked type="checkbox">
+                                 <span>{{{icon "checkbox"}}}</span>
+                                 </label>
+                              </div>
+                              <div class="widget-folder-name widget-subname">
+                                 {{{icon "camera"}}}
+                                 <div class="device-wrap" style="display: flex;flex-direction: column;">
+                                    <span>Zones</span>
+                                    <span class="widget-folder-device">Camera 1</span>
+                                 </div>
+                              </div>
+                           </flex-box>
+                           <div class="widget-folder-connection connection connection-good">
+                              <flex-box ai="center">{{{icon "connection"}}} Connection</flex-box>
+                           </div>
+                           <div class="widget-folder-sensor">
+                              <button class="widget-button">{{{icon "click"}}}</button>
+                           </div>
+                        </flex-box>
+                        <flex-box ai="center" jc="space-between" class="widget-folder widget-field">
+                           <flex-box ai="center" class="">
+                              <div class="">
+                                 <label class="widget-folder-label">
+                                 <input class="widget-folder-check input" checked type="checkbox">
+                                 <span>{{{icon "checkbox"}}}</span>
+                                 </label>
+                              </div>
+                              <div class="widget-folder-name widget-subname">
+                                 {{{icon "camera"}}}
+                                 <div class="device-wrap" style="display: flex;flex-direction: column;">
+                                    <span>Zones</span>
+                                    <span class="widget-folder-device">Camera 1</span>
+                                 </div>
+                              </div>
+                           </flex-box>
+                           <div class="widget-folder-connection connection connection-good">
+                              <flex-box ai="center">{{{icon "connection"}}} Connection</flex-box>
+                           </div>
+                           <div class="widget-folder-sensor">
+                              <button class="widget-button">{{{icon "click"}}}</button>
+                           </div>
+                        </flex-box>
+                        <flex-box ai="center" jc="space-between" class="widget-folder widget-field">
+                           <flex-box ai="center" class="">
+                              <div class="">
+                                 <label class="widget-folder-label">
+                                 <input class="widget-folder-check input" checked type="checkbox">
+                                 <span>{{{icon "checkbox"}}}</span>
+                                 </label>
+                              </div>
+                              <div class="widget-folder-name widget-subname">
+                                 {{{icon "camera"}}}
+                                 <div class="device-wrap" style="display: flex;flex-direction: column;">
+                                    <span>Zones</span>
+                                    <span class="widget-folder-device">Camera 1</span>
+                                 </div>
+                              </div>
+                           </flex-box>
+                           <div class="widget-folder-connection connection connection-good">
+                              <flex-box ai="center">{{{icon "connection"}}} Connection</flex-box>
+                           </div>
+                           <div class="widget-folder-sensor">
+                              <button class="widget-button">{{{icon "click"}}}</button>
+                           </div>
+                        </flex-box>
+                     </div>
+                  </div>
+                  
+               </div>
+            </div>
+         </div>
+         <!-- preloader -->
+         <div class="widget-preloader">
+            <div class="widget-preloader-icon">{{{icon "preloader"}}}</div>
+            <div class="widget-preloader-text">Loading</div>
+         </div>
+      </div>
+      <!-- button resize -->
+         <div class="widget-resize">
+             <button class="widget-resize-button widget-button">{{{icon "resize"}}}</button>
+         </div>
+   </div>
+   <!-- widget drag -->   
+   <!-- widget collapse -->
+   <div class=" widget-collapse">
+         <flex-box class="widget-header" row gap="20px" ai="center" jc="space-between">
+            <div class="widget-header-name">Search Geo Objects</div>
+            <flex-box class="widget-header" row gap="20px" ai="center">
+               <button class="widget-header-button widget-button">{{{icon "minus"}}}</button>
+               <button class="widget-header-button widget-button">{{{icon "pin"}}}</button>
+               <button class="widget-header-button-expand widget-button">{{{icon "plus"}}}</button>
+            </flex-box>
+         </flex-box>
+         <div class="widget-body">
+            <flex-box class="widget-wrap" row gap="20px" ai="center">
+               <!-- filter -->
+               <flex-box class="widget-filter" row gap="20px" ai="center" jc="space-between">
+                  <button class="widget-button ">{{{icon "filter"}}}</button>
+                  <flex-box class="widget-button-text" row gap="10px" ai="center">
+                     <span>Placemarks</span> <span>{{{icon "filter_arrow"}}}</span> 
+                  </flex-box>
+               </flex-box>
+               <!-- search -->
+               <flex-box class="widget-search" row gap="20px" ai="center">
+                  <input value="Search" class="widget-search-input" type="search" name="search" id="">
+                  <label class="widget-search-label" for="search">
+                     <div class="">{{{icon "search"}}}</div>
+                     <div class="">{{{icon "cross"}}}</div>
+                  </label>
+               </flex-box>
+            </flex-box>
+            <!-- result search -->
+            <div class="widget-result">
+               <div class="widget-wrap">
+                  <flex-box class="widget-folder widget-folder-active" ai="center" jc="space-between">
+                     <flex-box ai="center" class="widget-folder-name">
+                        {{{icon "zones"}}}
+                        <span>Zones</span>
+                     </flex-box>
+                     <flex-box class="widget-folder-icon">
+                        {{{icon "zones_arrow"}}}
+                     </flex-box>
+                  </flex-box>
+                  <div class="widget-dropdown widget-list">
+                     <div class="widget-container">
+                        <flex-box ai="center" jc="space-between" class="widget-folder widget-subfolder">
+                           <flex-box ai="center" class="">
+                              <div class="">
+                                 <label class="widget-folder-label">
+                                 <input class="widget-folder-check input" checked type="checkbox">
+                                 <span>{{{icon "checkbox"}}}</span>
+                                 </label>
+                              </div>
+                              <div class="widget-folder-name widget-subname">
+                                 {{{icon "zones"}}}
+                                 <span>Zone 1</span>
+                              </div>
+                           </flex-box>
+                           <div class="widget-folder-icon">{{{icon "zones_arrow"}}}</div>
+                        </flex-box>
+                     </div>
+                     <div class="widget-container">
+                        <flex-box ai="center" jc="space-between" class="widget-folder widget-subfolder">
+                           <flex-box ai="center" class="">
+                              <div class="">
+                                 <label class="widget-folder-label">
+                                 <input class="widget-folder-check input" checked type="checkbox">
+                                 <span>{{{icon "checkbox"}}}</span>
+                                 </label>
+                              </div>
+                              <div class="widget-folder-name widget-subname">
+                                 {{{icon "zones"}}}
+                                 <span>Zone 1</span>
+                              </div>
+                           </flex-box>
+                           <div class="widget-folder-icon">{{{icon "zones_arrow"}}}</div>
+                        </flex-box>
+                     </div>
+                     <div class="widget-container">
+                        <flex-box ai="center" jc="space-between" class="widget-folder widget-subfolder">
+                           <flex-box ai="center" class="">
+                              <div class="">
+                                 <label class="widget-folder-label">
+                                 <input class="widget-folder-check input" checked type="checkbox">
+                                 <span>{{{icon "checkbox"}}}</span>
+                                 </label>
+                              </div>
+                              <div class="widget-folder-name widget-subname">
+                                 {{{icon "zones"}}}
+                                 <span>Zone 1</span>
+                              </div>
+                           </flex-box>
+                           <div class="widget-folder-icon">{{{icon "zones_arrow"}}}</div>
+                        </flex-box>
+                        <div class="widget-dropdown widget-list">
+                           <flex-box ai="center" jc="space-between" class="widget-folder widget-field">
+                              <flex-box ai="center" class="">
+                                 <div class="">
+                                    <label class="widget-folder-label">
+                                    <input class="widget-folder-check input" checked type="checkbox">
+                                    <span>{{{icon "checkbox"}}}</span>
+                                    </label>
+                                 </div>
+                                 <div class="widget-folder-name widget-subname">
+                                    {{{icon "camera"}}}
+                                    <div class="device-wrap" style="display: flex;flex-direction: column;">
+                                       <span>Zones</span>
+                                       <span class="widget-folder-device">Camera 1</span>
+                                    </div>
+                                 </div>
+                              </flex-box>
+                              <div class="widget-folder-connection connection connection-bad">
+                                 <flex-box ai="center">{{{icon "connection"}}} No connection</flex-box>
+                              </div>
+                              <div class="widget-folder-sensor">
+                                 <button class="widget-button">{{{icon "click"}}}</button>
+                              </div>
+                           </flex-box>
+                           <flex-box ai="center" jc="space-between" class="widget-folder widget-field">
+                              <flex-box ai="center" class="">
+                                 <div class="">
+                                    <label class="widget-folder-label">
+                                    <input class="widget-folder-check input" checked type="checkbox">
+                                    <span>{{{icon "checkbox"}}}</span>
+                                    </label>
+                                 </div>
+                                 <div class="widget-folder-name widget-subname">
+                                    {{{icon "sensor"}}}
+                                    <div class="device-wrap" style="display: flex;flex-direction: column;">
+                                       <span>Zones</span>
+                                       <span class="widget-folder-device">Camera 1</span>
+                                    </div>
+                                 </div>
+                              </flex-box>
+                              <div class="widget-folder-connection connection connection-average">
+                                 <flex-box ai="center">{{{icon "connection"}}} Connection</flex-box>
+                              </div>
+                              <div class="widget-folder-sensor">
+                                 <button class="widget-button">{{{icon "click"}}}</button>
+                              </div>
+                           </flex-box>
+                           <flex-box ai="center" jc="space-between" class="widget-folder widget-field">
+                              <flex-box ai="center" class="">
+                                 <div class="">
+                                    <label class="widget-folder-label">
+                                    <input class="widget-folder-check input" checked type="checkbox">
+                                    <span>{{{icon "checkbox"}}}</span>
+                                    </label>
+                                 </div>
+                                 <div class="widget-folder-name widget-subname">
+                                    {{{icon "camera"}}}
+                                    <div class="device-wrap" style="display: flex;flex-direction: column;">
+                                       <span>Zones</span>
+                                       <span class="widget-folder-device">Camera 1</span>
+                                    </div>
+                                 </div>
+                              </flex-box>
+                              <div class="widget-folder-connection connection connection-good">
+                                 <flex-box ai="center">{{{icon "connection"}}} Connection</flex-box>
+                              </div>
+                              <div class="widget-folder-sensor">
+                                 <button class="widget-button">{{{icon "click"}}}</button>
+                              </div>
+                           </flex-box>
+                        </div>
+                     </div>
+                     
+                  </div>
+               </div>
+               <div class="widget-wrap">
+                  <flex-box class="widget-folder" ai="center" jc="space-between">
+                     <flex-box ai="center" class="widget-folder-name">
+                        {{{icon "sites"}}}
+                        <span>Sites</span>
+                     </flex-box>
+                     <flex-box class="widget-folder-icon">
+                        {{{icon "zones_arrow"}}}
+                     </flex-box>
+                  </flex-box>
+                  <div class="widget-dropdown widget-list">
+                     <div class="widget-container">
+                        <flex-box ai="center" jc="space-between" class="widget-folder widget-subfolder">
+                           <flex-box ai="center" class="">
+                              <div class="">
+                                 <label class="widget-folder-label">
+                                 <input class="widget-folder-check input" checked type="checkbox">
+                                 <span>{{{icon "checkbox"}}}</span>
+                                 </label>
+                              </div>
+                              <div class="widget-folder-name widget-subname">
+                                 {{{icon "zones"}}}
+                                 <span>Zone 1</span>
+                              </div>
+                           </flex-box>
+                           <div class="widget-folder-icon">{{{icon "zones_arrow"}}}</div>
+                        </flex-box>
+                     </div>
+                     <div class="widget-container">
+                        <flex-box ai="center" jc="space-between" class="widget-folder widget-subfolder">
+                           <flex-box ai="center" class="">
+                              <div class="">
+                                 <label class="widget-folder-label">
+                                 <input class="widget-folder-check input" checked type="checkbox">
+                                 <span>{{{icon "checkbox"}}}</span>
+                                 </label>
+                              </div>
+                              <div class="widget-folder-name widget-subname">
+                                 {{{icon "zones"}}}
+                                 <span>Zone 1</span>
+                              </div>
+                           </flex-box>
+                           <div class="widget-folder-icon">{{{icon "zones_arrow"}}}</div>
+                        </flex-box>
+                     </div>
+                     <div class="widget-container">
+                        <flex-box ai="center" jc="space-between" class="widget-folder widget-subfolder ">
+                           <flex-box ai="center" class="">
+                              <div class="">
+                                 <label class="widget-folder-label">
+                                 <input class="widget-folder-check input" checked type="checkbox">
+                                 <span>{{{icon "checkbox"}}}</span>
+                                 </label>
+                              </div>
+                              <div class="widget-folder-name widget-subname">
+                                 {{{icon "zones"}}}
+                                 <span>Zone 1</span>
+                              </div>
+                           </flex-box>
+                           <div class="widget-folder-icon">{{{icon "zones_arrow"}}}</div>
+                        </flex-box>
+                        <div class="widget-dropdown widget-list">
+                           <flex-box ai="center" jc="space-between" class="widget-folder widget-field">
+                              <flex-box ai="center" class="">
+                                 <div class="">
+                                    <label class="widget-folder-label">
+                                    <input class="widget-folder-check input" checked type="checkbox">
+                                    <span>{{{icon "checkbox"}}}</span>
+                                    </label>
+                                 </div>
+                                 <div class="widget-folder-name widget-subname">
+                                    {{{icon "camera"}}}
+                                    <div class="device-wrap" style="display: flex;flex-direction: column;">
+                                       <span>Zones</span>
+                                       <span class="widget-folder-device">Camera 1</span>
+                                    </div>
+                                 </div>
+                              </flex-box>
+                              <div class="widget-folder-connection connection connection-bad">
+                                 <flex-box ai="center">{{{icon "connection"}}} No connection</flex-box>
+                              </div>
+                              <div class="widget-folder-sensor">
+                                 <button class="widget-button">{{{icon "click"}}}</button>
+                              </div>
+                           </flex-box>
+                           <flex-box ai="center" jc="space-between" class="widget-folder widget-field">
+                              <flex-box ai="center" class="">
+                                 <div class="">
+                                    <label class="widget-folder-label">
+                                    <input class="widget-folder-check input" checked type="checkbox">
+                                    <span>{{{icon "checkbox"}}}</span>
+                                    </label>
+                                 </div>
+                                 <div class="widget-folder-name widget-subname">
+                                    {{{icon "sensor"}}}
+                                    <div class="device-wrap" style="display: flex;flex-direction: column;">
+                                       <span>Zones</span>
+                                       <span class="widget-folder-device">Camera 1</span>
+                                    </div>
+                                 </div>
+                              </flex-box>
+                              <div class="widget-folder-connection connection connection-average">
+                                 <flex-box ai="center">{{{icon "connection"}}} Connection</flex-box>
+                              </div>
+                              <div class="widget-folder-sensor">
+                                 <button class="widget-button">{{{icon "click"}}}</button>
+                              </div>
+                           </flex-box>
+                           <flex-box ai="center" jc="space-between" class="widget-folder widget-field">
+                              <flex-box ai="center" class="">
+                                 <div class="">
+                                    <label class="widget-folder-label">
+                                    <input class="widget-folder-check input" checked type="checkbox">
+                                    <span>{{{icon "checkbox"}}}</span>
+                                    </label>
+                                 </div>
+                                 <div class="widget-folder-name widget-subname">
+                                    {{{icon "camera"}}}
+                                    <div class="device-wrap" style="display: flex;flex-direction: column;">
+                                       <span>Zones</span>
+                                       <span class="widget-folder-device">Camera 1</span>
+                                    </div>
+                                 </div>
+                              </flex-box>
+                              <div class="widget-folder-connection connection connection-good">
+                                 <flex-box ai="center">{{{icon "connection"}}} Connection</flex-box>
+                              </div>
+                              <div class="widget-folder-sensor">
+                                 <button class="widget-button">{{{icon "click"}}}</button>
+                              </div>
+                           </flex-box>
+                           <flex-box ai="center" jc="space-between" class="widget-folder widget-field">
+                              <flex-box ai="center" class="">
+                                 <div class="">
+                                    <label class="widget-folder-label">
+                                    <input class="widget-folder-check input" checked type="checkbox">
+                                    <span>{{{icon "checkbox"}}}</span>
+                                    </label>
+                                 </div>
+                                 <div class="widget-folder-name widget-subname">
+                                    {{{icon "camera"}}}
+                                    <div class="device-wrap" style="display: flex;flex-direction: column;">
+                                       <span>Zones</span>
+                                       <span class="widget-folder-device">Camera 1</span>
+                                    </div>
+                                 </div>
+                              </flex-box>
+                              <div class="widget-folder-connection connection connection-good">
+                                 <flex-box ai="center">{{{icon "connection"}}} Connection</flex-box>
+                              </div>
+                              <div class="widget-folder-sensor">
+                                 <button class="widget-button">{{{icon "click"}}}</button>
+                              </div>
+                           </flex-box>
+                           <flex-box ai="center" jc="space-between" class="widget-folder widget-field">
+                              <flex-box ai="center" class="">
+                                 <div class="">
+                                    <label class="widget-folder-label">
+                                    <input class="widget-folder-check input" checked type="checkbox">
+                                    <span>{{{icon "checkbox"}}}</span>
+                                    </label>
+                                 </div>
+                                 <div class="widget-folder-name widget-subname">
+                                    {{{icon "camera"}}}
+                                    <div class="device-wrap" style="display: flex;flex-direction: column;">
+                                       <span>Zones</span>
+                                       <span class="widget-folder-device">Camera 1</span>
+                                    </div>
+                                 </div>
+                              </flex-box>
+                              <div class="widget-folder-connection connection connection-good">
+                                 <flex-box ai="center">{{{icon "connection"}}} Connection</flex-box>
+                              </div>
+                              <div class="widget-folder-sensor">
+                                 <button class="widget-button">{{{icon "click"}}}</button>
+                              </div>
+                           </flex-box>
+                           <flex-box ai="center" jc="space-between" class="widget-folder widget-field">
+                              <flex-box ai="center" class="">
+                                 <div class="">
+                                    <label class="widget-folder-label">
+                                    <input class="widget-folder-check input" checked type="checkbox">
+                                    <span>{{{icon "checkbox"}}}</span>
+                                    </label>
+                                 </div>
+                                 <div class="widget-folder-name widget-subname">
+                                    {{{icon "camera"}}}
+                                    <div class="device-wrap" style="display: flex;flex-direction: column;">
+                                       <span>Zones</span>
+                                       <span class="widget-folder-device">Camera 1</span>
+                                    </div>
+                                 </div>
+                              </flex-box>
+                              <div class="widget-folder-connection connection connection-good">
+                                 <flex-box ai="center">{{{icon "connection"}}} Connection</flex-box>
+                              </div>
+                              <div class="widget-folder-sensor">
+                                 <button class="widget-button">{{{icon "click"}}}</button>
+                              </div>
+                           </flex-box>
+                           <flex-box ai="center" jc="space-between" class="widget-folder widget-field">
+                              <flex-box ai="center" class="">
+                                 <div class="">
+                                    <label class="widget-folder-label">
+                                    <input class="widget-folder-check input" checked type="checkbox">
+                                    <span>{{{icon "checkbox"}}}</span>
+                                    </label>
+                                 </div>
+                                 <div class="widget-folder-name widget-subname">
+                                    {{{icon "camera"}}}
+                                    <div class="device-wrap" style="display: flex;flex-direction: column;">
+                                       <span>Zones</span>
+                                       <span class="widget-folder-device">Camera 1</span>
+                                    </div>
+                                 </div>
+                              </flex-box>
+                              <div class="widget-folder-connection connection connection-good">
+                                 <flex-box ai="center">{{{icon "connection"}}} Connection</flex-box>
+                              </div>
+                              <div class="widget-folder-sensor">
+                                 <button class="widget-button">{{{icon "click"}}}</button>
+                              </div>
+                           </flex-box>
+                        </div>
+                     </div>
+                     
+                  </div>
+               </div>
+               <div class="widget-wrap">
+                  <flex-box class="widget-folder" ai="center" jc="space-between">
+                     <flex-box ai="center" class="widget-folder-name">
+                        {{{icon "placemark"}}}
+                        <span>Placemark</span>
+                     </flex-box>
+                     <flex-box class="widget-folder-icon">
+                        {{{icon "zones_arrow"}}}
+                     </flex-box>
+                  </flex-box>
+                        <div class="widget-dropdown widget-list">
+                     <div class="widget-container">
+                        <flex-box ai="center" jc="space-between" class="widget-folder widget-subfolder">
+                           <flex-box ai="center" class="">
+                              <div class="">
+                                 <label class="widget-folder-label">
+                                 <input class="widget-folder-check input" checked type="checkbox">
+                                 <span>{{{icon "checkbox"}}}</span>
+                                 </label>
+                              </div>
+                              <div class="widget-folder-name widget-subname">
+                                 {{{icon "zones"}}}
+                                 <span>Zone 1</span>
+                              </div>
+                           </flex-box>
+                           <div class="widget-folder-icon">{{{icon "zones_arrow"}}}</div>
+                        </flex-box>
+                     </div>
+                     <div class="widget-container">
+                        <flex-box ai="center" jc="space-between" class="widget-folder widget-subfolder">
+                           <flex-box ai="center" class="">
+                              <div class="">
+                                 <label class="widget-folder-label">
+                                 <input class="widget-folder-check input" checked type="checkbox">
+                                 <span>{{{icon "checkbox"}}}</span>
+                                 </label>
+                              </div>
+                              <div class="widget-folder-name widget-subname">
+                                 {{{icon "zones"}}}
+                                 <span>Zone 1</span>
+                              </div>
+                           </flex-box>
+                           <div class="widget-folder-icon">{{{icon "zones_arrow"}}}</div>
+                        </flex-box>
+                     </div>
+                     <div class="widget-container">
+                        <flex-box ai="center" jc="space-between" class="widget-folder widget-subfolder ">
+                           <flex-box ai="center" class="">
+                              <div class="">
+                                 <label class="widget-folder-label">
+                                 <input class="widget-folder-check input" checked type="checkbox">
+                                 <span>{{{icon "checkbox"}}}</span>
+                                 </label>
+                              </div>
+                              <div class="widget-folder-name widget-subname">
+                                 {{{icon "zones"}}}
+                                 <span>Zone 1</span>
+                              </div>
+                           </flex-box>
+                           <div class="widget-folder-icon">{{{icon "zones_arrow"}}}</div>
+                        </flex-box>
+                        <div class="widget-dropdown widget-list">
+                           <flex-box ai="center" jc="space-between" class="widget-folder widget-field">
+                              <flex-box ai="center" class="">
+                                 <div class="">
+                                    <label class="widget-folder-label">
+                                    <input class="widget-folder-check input" checked type="checkbox">
+                                    <span>{{{icon "checkbox"}}}</span>
+                                    </label>
+                                 </div>
+                                 <div class="widget-folder-name widget-subname">
+                                    {{{icon "camera"}}}
+                                    <div class="device-wrap" style="display: flex;flex-direction: column;">
+                                       <span>Zones</span>
+                                       <span class="widget-folder-device">Camera 1</span>
+                                    </div>
+                                 </div>
+                              </flex-box>
+                              <div class="widget-folder-connection connection connection-bad">
+                                 <flex-box ai="center">{{{icon "connection"}}} No connection</flex-box>
+                              </div>
+                              <div class="widget-folder-sensor">
+                                 <button class="widget-button">{{{icon "click"}}}</button>
+                              </div>
+                           </flex-box>
+                           <flex-box ai="center" jc="space-between" class="widget-folder widget-field">
+                              <flex-box ai="center" class="">
+                                 <div class="">
+                                    <label class="widget-folder-label">
+                                    <input class="widget-folder-check input" checked type="checkbox">
+                                    <span>{{{icon "checkbox"}}}</span>
+                                    </label>
+                                 </div>
+                                 <div class="widget-folder-name widget-subname">
+                                    {{{icon "sensor"}}}
+                                    <div class="device-wrap" style="display: flex;flex-direction: column;">
+                                       <span>Zones</span>
+                                       <span class="widget-folder-device">Camera 1</span>
+                                    </div>
+                                 </div>
+                              </flex-box>
+                              <div class="widget-folder-connection connection connection-average">
+                                 <flex-box ai="center">{{{icon "connection"}}} Connection</flex-box>
+                              </div>
+                              <div class="widget-folder-sensor">
+                                 <button class="widget-button">{{{icon "click"}}}</button>
+                              </div>
+                           </flex-box>
+                           <flex-box ai="center" jc="space-between" class="widget-folder widget-field">
+                              <flex-box ai="center" class="">
+                                 <div class="">
+                                    <label class="widget-folder-label">
+                                    <input class="widget-folder-check input" checked type="checkbox">
+                                    <span>{{{icon "checkbox"}}}</span>
+                                    </label>
+                                 </div>
+                                 <div class="widget-folder-name widget-subname">
+                                    {{{icon "camera"}}}
+                                    <div class="device-wrap" style="display: flex;flex-direction: column;">
+                                       <span>Zones</span>
+                                       <span class="widget-folder-device">Camera 1</span>
+                                    </div>
+                                 </div>
+                              </flex-box>
+                              <div class="widget-folder-connection connection connection-good">
+                                 <flex-box ai="center">{{{icon "connection"}}} Connection</flex-box>
+                              </div>
+                              <div class="widget-folder-sensor">
+                                 <button class="widget-button">{{{icon "click"}}}</button>
+                              </div>
+                           </flex-box>
+                           <flex-box ai="center" jc="space-between" class="widget-folder widget-field">
+                              <flex-box ai="center" class="">
+                                 <div class="">
+                                    <label class="widget-folder-label">
+                                    <input class="widget-folder-check input" checked type="checkbox">
+                                    <span>{{{icon "checkbox"}}}</span>
+                                    </label>
+                                 </div>
+                                 <div class="widget-folder-name widget-subname">
+                                    {{{icon "camera"}}}
+                                    <div class="device-wrap" style="display: flex;flex-direction: column;">
+                                       <span>Zones</span>
+                                       <span class="widget-folder-device">Camera 1</span>
+                                    </div>
+                                 </div>
+                              </flex-box>
+                              <div class="widget-folder-connection connection connection-good">
+                                 <flex-box ai="center">{{{icon "connection"}}} Connection</flex-box>
+                              </div>
+                              <div class="widget-folder-sensor">
+                                 <button class="widget-button">{{{icon "click"}}}</button>
+                              </div>
+                           </flex-box>
+                           <flex-box ai="center" jc="space-between" class="widget-folder widget-field">
+                              <flex-box ai="center" class="">
+                                 <div class="">
+                                    <label class="widget-folder-label">
+                                    <input class="widget-folder-check input" checked type="checkbox">
+                                    <span>{{{icon "checkbox"}}}</span>
+                                    </label>
+                                 </div>
+                                 <div class="widget-folder-name widget-subname">
+                                    {{{icon "camera"}}}
+                                    <div class="device-wrap" style="display: flex;flex-direction: column;">
+                                       <span>Zones</span>
+                                       <span class="widget-folder-device">Camera 1</span>
+                                    </div>
+                                 </div>
+                              </flex-box>
+                              <div class="widget-folder-connection connection connection-good">
+                                 <flex-box ai="center">{{{icon "connection"}}} Connection</flex-box>
+                              </div>
+                              <div class="widget-folder-sensor">
+                                 <button class="widget-button">{{{icon "click"}}}</button>
+                              </div>
+                           </flex-box>
+                           <flex-box ai="center" jc="space-between" class="widget-folder widget-field">
+                              <flex-box ai="center" class="">
+                                 <div class="">
+                                    <label class="widget-folder-label">
+                                    <input class="widget-folder-check input" checked type="checkbox">
+                                    <span>{{{icon "checkbox"}}}</span>
+                                    </label>
+                                 </div>
+                                 <div class="widget-folder-name widget-subname">
+                                    {{{icon "camera"}}}
+                                    <div class="device-wrap" style="display: flex;flex-direction: column;">
+                                       <span>Zones</span>
+                                       <span class="widget-folder-device">Camera 1</span>
+                                    </div>
+                                 </div>
+                              </flex-box>
+                              <div class="widget-folder-connection connection connection-good">
+                                 <flex-box ai="center">{{{icon "connection"}}} Connection</flex-box>
+                              </div>
+                              <div class="widget-folder-sensor">
+                                 <button class="widget-button">{{{icon "click"}}}</button>
+                              </div>
+                           </flex-box>
+                           <flex-box ai="center" jc="space-between" class="widget-folder widget-field">
+                              <flex-box ai="center" class="">
+                                 <div class="">
+                                    <label class="widget-folder-label">
+                                    <input class="widget-folder-check input" checked type="checkbox">
+                                    <span>{{{icon "checkbox"}}}</span>
+                                    </label>
+                                 </div>
+                                 <div class="widget-folder-name widget-subname">
+                                    {{{icon "camera"}}}
+                                    <div class="device-wrap" style="display: flex;flex-direction: column;">
+                                       <span>Zones</span>
+                                       <span class="widget-folder-device">Camera 1</span>
+                                    </div>
+                                 </div>
+                              </flex-box>
+                              <div class="widget-folder-connection connection connection-good">
+                                 <flex-box ai="center">{{{icon "connection"}}} Connection</flex-box>
+                              </div>
+                              <div class="widget-folder-sensor">
+                                 <button class="widget-button">{{{icon "click"}}}</button>
+                              </div>
+                           </flex-box>
+                        </div>
+                     </div>
+                     <div class="widget-container">
+                        <flex-box ai="center" jc="space-between" class="widget-folder widget-subfolder">
+                           <flex-box ai="center" class="">
+                              <div class="">
+                                 <label class="widget-folder-label">
+                                 <input class="widget-folder-check input" checked type="checkbox">
+                                 <span>{{{icon "checkbox"}}}</span>
+                                 </label>
+                              </div>
+                              <div class="widget-folder-name widget-subname">
+                                 {{{icon "zones"}}}
+                                 <span>Zone 1</span>
+                              </div>
+                           </flex-box>
+                           <div class="widget-folder-icon">{{{icon "zones_arrow"}}}</div>
+                        </flex-box>
+                     </div>
+                     <div class="widget-container">
+                        <flex-box ai="center" jc="space-between" class="widget-folder widget-subfolder">
+                           <flex-box ai="center" class="">
+                              <div class="">
+                                 <label class="widget-folder-label">
+                                 <input class="widget-folder-check input" checked type="checkbox">
+                                 <span>{{{icon "checkbox"}}}</span>
+                                 </label>
+                              </div>
+                              <div class="widget-folder-name widget-subname">
+                                 {{{icon "zones"}}}
+                                 <span>Zone 1</span>
+                              </div>
+                           </flex-box>
+                           <div class="widget-folder-icon">{{{icon "zones_arrow"}}}</div>
+                        </flex-box>
+                     </div>
+                     <div class="widget-container">
+                        <flex-box ai="center" jc="space-between" class="widget-folder widget-subfolder">
+                           <flex-box ai="center" class="">
+                              <div class="">
+                                 <label class="widget-folder-label">
+                                 <input class="widget-folder-check input" checked type="checkbox">
+                                 <span>{{{icon "checkbox"}}}</span>
+                                 </label>
+                              </div>
+                              <div class="widget-folder-name widget-subname">
+                                 {{{icon "zones"}}}
+                                 <span>Zone 1</span>
+                              </div>
+                           </flex-box>
+                           <div class="widget-folder-icon">{{{icon "zones_arrow"}}}</div>
+                        </flex-box>
+                     </div>
+                  </div>
+               </div>
+               <div class="widget-wrap">
+                  <flex-box class="widget-folder" ai="center" jc="space-between">
+                     <flex-box ai="center" class="widget-folder-name">
+                        {{{icon "layers"}}}
+                        <span>Layers</span>
+                     </flex-box>
+                     <flex-box class="widget-folder-icon">
+                        {{{icon "zones_arrow"}}}
+                     </flex-box>
+                  </flex-box>
+                        <div class="widget-dropdown widget-list">
+                     <div class="widget-container">
+                        <flex-box ai="center" jc="space-between" class="widget-folder widget-subfolder">
+                           <flex-box ai="center" class="">
+                              <div class="">
+                                 <label class="widget-folder-label">
+                                 <input class="widget-folder-check input" checked type="checkbox">
+                                 <span>{{{icon "checkbox"}}}</span>
+                                 </label>
+                              </div>
+                              <div class="widget-folder-name widget-subname">
+                                 {{{icon "zones"}}}
+                                 <span>Zone 1</span>
+                              </div>
+                           </flex-box>
+                           <div class="widget-folder-icon">{{{icon "zones_arrow"}}}</div>
+                        </flex-box>
+                     </div>
+                     <div class="widget-container">
+                        <flex-box ai="center" jc="space-between" class="widget-folder widget-subfolder">
+                           <flex-box ai="center" class="">
+                              <div class="">
+                                 <label class="widget-folder-label">
+                                 <input class="widget-folder-check input" checked type="checkbox">
+                                 <span>{{{icon "checkbox"}}}</span>
+                                 </label>
+                              </div>
+                              <div class="widget-folder-name widget-subname">
+                                 {{{icon "zones"}}}
+                                 <span>Zone 1</span>
+                              </div>
+                           </flex-box>
+                           <div class="widget-folder-icon">{{{icon "zones_arrow"}}}</div>
+                        </flex-box>
+                     </div>
+                     <div class="widget-container">
+                        <flex-box ai="center" jc="space-between" class="widget-folder widget-subfolder ">
+                           <flex-box ai="center" class="">
+                              <div class="">
+                                 <label class="widget-folder-label">
+                                 <input class="widget-folder-check input" checked type="checkbox">
+                                 <span>{{{icon "checkbox"}}}</span>
+                                 </label>
+                              </div>
+                              <div class="widget-folder-name widget-subname">
+                                 {{{icon "zones"}}}
+                                 <span>Zone 1</span>
+                              </div>
+                           </flex-box>
+                           <div class="widget-folder-icon">{{{icon "zones_arrow"}}}</div>
+                        </flex-box>
+                        <div class="widget-dropdown widget-list">
+                           <flex-box ai="center" jc="space-between" class="widget-folder widget-field">
+                              <flex-box ai="center" class="">
+                                 <div class="">
+                                    <label class="widget-folder-label">
+                                    <input class="widget-folder-check input" checked type="checkbox">
+                                    <span>{{{icon "checkbox"}}}</span>
+                                    </label>
+                                 </div>
+                                 <div class="widget-folder-name widget-subname">
+                                    {{{icon "camera"}}}
+                                    <div class="device-wrap" style="display: flex;flex-direction: column;">
+                                       <span>Zones</span>
+                                       <span class="widget-folder-device">Camera 1</span>
+                                    </div>
+                                 </div>
+                              </flex-box>
+                              <div class="widget-folder-connection connection connection-bad">
+                                 <flex-box ai="center">{{{icon "connection"}}} No connection</flex-box>
+                              </div>
+                              <div class="widget-folder-sensor">
+                                 <button class="widget-button">{{{icon "click"}}}</button>
+                              </div>
+                           </flex-box>
+                           <flex-box ai="center" jc="space-between" class="widget-folder widget-field">
+                              <flex-box ai="center" class="">
+                                 <div class="">
+                                    <label class="widget-folder-label">
+                                    <input class="widget-folder-check input" checked type="checkbox">
+                                    <span>{{{icon "checkbox"}}}</span>
+                                    </label>
+                                 </div>
+                                 <div class="widget-folder-name widget-subname">
+                                    {{{icon "sensor"}}}
+                                    <div class="device-wrap" style="display: flex;flex-direction: column;">
+                                       <span>Zones</span>
+                                       <span class="widget-folder-device">Camera 1</span>
+                                    </div>
+                                 </div>
+                              </flex-box>
+                              <div class="widget-folder-connection connection connection-average">
+                                 <flex-box ai="center">{{{icon "connection"}}} Connection</flex-box>
+                              </div>
+                              <div class="widget-folder-sensor">
+                                 <button class="widget-button">{{{icon "click"}}}</button>
+                              </div>
+                           </flex-box>
+                           <flex-box ai="center" jc="space-between" class="widget-folder widget-field">
+                              <flex-box ai="center" class="">
+                                 <div class="">
+                                    <label class="widget-folder-label">
+                                    <input class="widget-folder-check input" checked type="checkbox">
+                                    <span>{{{icon "checkbox"}}}</span>
+                                    </label>
+                                 </div>
+                                 <div class="widget-folder-name widget-subname">
+                                    {{{icon "camera"}}}
+                                    <div class="device-wrap" style="display: flex;flex-direction: column;">
+                                       <span>Zones</span>
+                                       <span class="widget-folder-device">Camera 1</span>
+                                    </div>
+                                 </div>
+                              </flex-box>
+                              <div class="widget-folder-connection connection connection-good">
+                                 <flex-box ai="center">{{{icon "connection"}}} Connection</flex-box>
+                              </div>
+                              <div class="widget-folder-sensor">
+                                 <button class="widget-button">{{{icon "click"}}}</button>
+                              </div>
+                           </flex-box>
+                           <flex-box ai="center" jc="space-between" class="widget-folder widget-field">
+                              <flex-box ai="center" class="">
+                                 <div class="">
+                                    <label class="widget-folder-label">
+                                    <input class="widget-folder-check input" checked type="checkbox">
+                                    <span>{{{icon "checkbox"}}}</span>
+                                    </label>
+                                 </div>
+                                 <div class="widget-folder-name widget-subname">
+                                    {{{icon "camera"}}}
+                                    <div class="device-wrap" style="display: flex;flex-direction: column;">
+                                       <span>Zones</span>
+                                       <span class="widget-folder-device">Camera 1</span>
+                                    </div>
+                                 </div>
+                              </flex-box>
+                              <div class="widget-folder-connection connection connection-good">
+                                 <flex-box ai="center">{{{icon "connection"}}} Connection</flex-box>
+                              </div>
+                              <div class="widget-folder-sensor">
+                                 <button class="widget-button">{{{icon "click"}}}</button>
+                              </div>
+                           </flex-box>
+                           <flex-box ai="center" jc="space-between" class="widget-folder widget-field">
+                              <flex-box ai="center" class="">
+                                 <div class="">
+                                    <label class="widget-folder-label">
+                                    <input class="widget-folder-check input" checked type="checkbox">
+                                    <span>{{{icon "checkbox"}}}</span>
+                                    </label>
+                                 </div>
+                                 <div class="widget-folder-name widget-subname">
+                                    {{{icon "camera"}}}
+                                    <div class="device-wrap" style="display: flex;flex-direction: column;">
+                                       <span>Zones</span>
+                                       <span class="widget-folder-device">Camera 1</span>
+                                    </div>
+                                 </div>
+                              </flex-box>
+                              <div class="widget-folder-connection connection connection-good">
+                                 <flex-box ai="center">{{{icon "connection"}}} Connection</flex-box>
+                              </div>
+                              <div class="widget-folder-sensor">
+                                 <button class="widget-button">{{{icon "click"}}}</button>
+                              </div>
+                           </flex-box>
+                           <flex-box ai="center" jc="space-between" class="widget-folder widget-field">
+                              <flex-box ai="center" class="">
+                                 <div class="">
+                                    <label class="widget-folder-label">
+                                    <input class="widget-folder-check input" checked type="checkbox">
+                                    <span>{{{icon "checkbox"}}}</span>
+                                    </label>
+                                 </div>
+                                 <div class="widget-folder-name widget-subname">
+                                    {{{icon "camera"}}}
+                                    <div class="device-wrap" style="display: flex;flex-direction: column;">
+                                       <span>Zones</span>
+                                       <span class="widget-folder-device">Camera 1</span>
+                                    </div>
+                                 </div>
+                              </flex-box>
+                              <div class="widget-folder-connection connection connection-good">
+                                 <flex-box ai="center">{{{icon "connection"}}} Connection</flex-box>
+                              </div>
+                              <div class="widget-folder-sensor">
+                                 <button class="widget-button">{{{icon "click"}}}</button>
+                              </div>
+                           </flex-box>
+                           <flex-box ai="center" jc="space-between" class="widget-folder widget-field">
+                              <flex-box ai="center" class="">
+                                 <div class="">
+                                    <label class="widget-folder-label">
+                                    <input class="widget-folder-check input" checked type="checkbox">
+                                    <span>{{{icon "checkbox"}}}</span>
+                                    </label>
+                                 </div>
+                                 <div class="widget-folder-name widget-subname">
+                                    {{{icon "camera"}}}
+                                    <div class="device-wrap" style="display: flex;flex-direction: column;">
+                                       <span>Zones</span>
+                                       <span class="widget-folder-device">Camera 1</span>
+                                    </div>
+                                 </div>
+                              </flex-box>
+                              <div class="widget-folder-connection connection connection-good">
+                                 <flex-box ai="center">{{{icon "connection"}}} Connection</flex-box>
+                              </div>
+                              <div class="widget-folder-sensor">
+                                 <button class="widget-button">{{{icon "click"}}}</button>
+                              </div>
+                           </flex-box>
+                        </div>
+                     </div>
+                     
+                  </div>
+               </div>
+            </div>
+            <!-- preloader -->
+            <div class="widget-preloader">
+               <div class="widget-preloader-icon">{{{icon "preloader"}}}</div>
+               <div class="widget-preloader-text">Loading</div>
+            </div>
+         </div>
+         <!-- button resize -->
+            <div class="widget-resize">
+                <button class="widget-resize-button widget-button">{{{icon "resize"}}}</button>
+            </div>
+      </div>
+       <!-- widget collapse -->
+   </body>
+</html>

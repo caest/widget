@@ -1,0 +1,471 @@
+/*------------------------------------------
+*   Optional component render file
+--------------------------------------------
+*   This file should contain the final CSS style rules that will be generated in CSS!
+*   API: https://ungic.com/guide/api/sass.html
+*/
+
+// SASS native modules
+@use "sass:meta" as meta;
+@use "sass:map" as map;
+
+// Component core
+@use ".core" as this;
+
+// Theme module
+@use "ungic.theme" as theme;
+
+// Ungic framework modules
+@use "ungic.meta" as un-meta;
+@use "ungic.utils" as un-utils;
+
+// Custom
+@use "functions" as *;
+@use "mixins" as *;
+
+// you must include any style files here
+// or write them in this file
+
+@include this.component {
+  // here you can write rules based on the component selector
+}
+
+//scroll
+::-webkit-scrollbar {
+  width: 5px;
+}
+
+::-webkit-scrollbar-track {
+  border-radius: 10px;
+  background: #e9f4ff;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #a7d2fd;
+  border-radius: 10px;
+}
+
+body {
+  font-family: "Open Sans";
+  margin: 0;
+  box-sizing: border-box;
+  background: #8e8d8d;
+  overflow: hidden;
+}
+//input reset
+input[type="search"]::-webkit-search-decoration,
+input[type="search"]::-webkit-search-cancel-button,
+input[type="search"]::-webkit-search-results-button,
+input[type="search"]::-webkit-search-results-decoration {
+  -webkit-appearance: none;
+}
+
+//widget style
+.widget {
+  min-width: 310px;
+  max-width: 400px;
+  background: #fff;
+  position: absolute;
+  height: 100vh;
+  border-radius: 0 10px 10px 0;
+  left: 0;
+  &-collapse {
+    //   display: none;
+    position: absolute;
+    right: 0;
+
+    .widget-header {
+      border-radius: 8px;
+      background: #f4f8fb;
+      padding: 5px 5px 5px 7px;
+      &-button {
+        display: none;
+        &-expand {
+          display: block;
+          position: relative;
+          i {
+            font-size: 16px;
+          }
+          &::before {
+            content: "";
+            position: absolute;
+            width: 2px;
+            border-radius: 10px;
+            background: rgba(185, 194, 206, 0.5);
+            height: 30px;
+            left: -15px;
+            top: -5px;
+          }
+        }
+      }
+    }
+    .widget-body {
+      display: none;
+    }
+    .widget-resize {
+      display: none;
+    }
+  }
+  &-drag {
+    //    display: none;
+    position: absolute;
+    right: 200px;
+    .widget-header {
+      &-button {
+        &-unpin {
+          display: none;
+        }
+        &-pin {
+          display: block;
+        }
+      }
+    }
+    .widget-body {
+      min-height: 600px;
+      border-radius: 0 0 12px 12px;
+    }
+  }
+  &-header {
+    background: #f4f8fb;
+    border-radius: 12px 12px 0px 0px;
+    padding: 5px 10px;
+    cursor: grabbing;
+
+    &-name {
+      font-size: 14px;
+      font-style: normal;
+      font-weight: 600;
+      color: #90a3b5;
+    }
+    &-button {
+      font-size: 3px;
+      &-pin {
+        display: none;
+        font-size: 12px;
+      }
+      &-unpin {
+        display: block;
+        font-size: 12px;
+      }
+      &:nth-child(2) {
+        font-size: 12px;
+        position: relative;
+        z-index: 1;
+      }
+    }
+  }
+  &-wrap {
+    .widget-folder-active + .widget-dropdown {
+      opacity: 1;
+      visibility: visible;
+      position: relative;
+      overflow: auto;
+      max-height: 230px;
+    }
+    .widget-folder:hover + .widget-dropdown {
+      opacity: 1;
+      visibility: visible;
+      position: relative;
+    }
+    .widget-container .widget-subfolder-active + .widget-dropdown {
+      opacity: 1;
+      visibility: visible;
+      position: relative;
+    }
+  }
+  &-body {
+    background: #fff;
+    padding: 13px 12px 0 13px;
+  }
+  &-button {
+    background: none;
+    border: none;
+    padding: 0;
+    box-shadow: none;
+    color: #abb7c2;
+
+    cursor: pointer;
+    &-text {
+      font-size: 14px;
+      color: #90a3b5;
+      span {
+        i {
+          font-size: 8px;
+        }
+      }
+    }
+    .icon-filter {
+      font-size: 24px;
+    }
+    .icon-click {
+      font-size: 18px;
+    }
+  }
+  &-filter {
+    margin-right: 11px;
+    cursor: pointer;
+    position: relative;
+    &::after {
+      position: absolute;
+    }
+  }
+  &-search {
+    width: 100%;
+    position: relative;
+    &-hidden {
+      display: none;
+    }
+    &::before {
+      content: "";
+      position: absolute;
+      left: 0;
+      width: 2px;
+      left: -12px;
+      height: 30px;
+      border-radius: 10px;
+      background: rgba(185, 194, 206, 0.5);
+    }
+    &-input {
+      margin-left: 11px;
+      width: 100%;
+      border-radius: 6px;
+      background: #f5f7f9;
+      border: 1px solid transparent;
+      color: #676f7a;
+      font-size: 14px;
+      font-weight: 400;
+      padding: 11px 18px;
+      &:focus {
+        outline: none;
+        border: 1px solid #0977ff;
+      }
+      &::-ms-clear {
+        display: none;
+      }
+    }
+    &-label {
+      position: absolute;
+      right: 10px;
+      font-size: 10px;
+      color: #abb7c2;
+      cursor: pointer;
+    }
+  }
+  &-result {
+    margin-top: 25px;
+  }
+  &-folder {
+    cursor: pointer;
+    border-radius: 8px;
+    background: #f5f7f9;
+    margin: 10px 0;
+    padding: 12px;
+    position: relative;
+    width: 100%;
+    &-active {
+      background: #c9e4ff;
+      .widget-folder-name {
+        color: #062e60;
+      }
+      .widget-folder-icon {
+        color: #062e60;
+        transform: rotateZ(180deg);
+      }
+    }
+
+    &-connection {
+      font-size: 8px;
+    }
+    &-name {
+      color: #8ea1b3;
+      font-size: 16px;
+      font-weight: 600;
+      span {
+        padding-left: 10px;
+      }
+      .icon {
+        font-size: 22px;
+      }
+    }
+    &-icon {
+      font-size: 4px;
+      color: #8ea1b3;
+      transition: all 0.2s;
+    }
+    &-label {
+      position: relative;
+      cursor: pointer;
+      display: flex;
+      margin-right: 11px;
+      span {
+        display: inline-block;
+        width: 16px;
+        height: 16px;
+        background: #fff;
+        border-radius: 3px;
+        i {
+          font-size: 7px;
+          opacity: 0;
+          color: #0977ff;
+          position: absolute;
+          top: 4px;
+          left: 3px;
+        }
+      }
+      input[type="checkbox"] {
+        position: absolute;
+        left: -9999px;
+      }
+      input[type="checkbox"]:checked + span i {
+        opacity: 1;
+      }
+    }
+    &-device {
+      font-size: 8px;
+      color: #7d9cc2;
+    }
+    &-connection {
+      font-size: 8px;
+    }
+  }
+  &-subfolder {
+    margin: 0;
+    width: 90%;
+    padding: 5px 8px;
+    &:hover {
+      background: #f5f7f9;
+    }
+    .widget-folder-icon {
+      font-size: 3px;
+    }
+    &-active {
+      background: #f5f7f9;
+      .widget-subname {
+        color: #062e60;
+      }
+      .widget-folder-icon {
+        color: #062e60;
+        transform: rotateZ(180deg);
+      }
+    }
+  }
+  &-subname {
+    display: flex;
+    align-items: center;
+    font-weight: 400;
+    font-size: 14px;
+    .icon {
+      font-size: 20px;
+    }
+  }
+  &-field {
+    margin: 5px 0 0 0;
+    width: 80%;
+    padding: 1px 8px;
+    .widget-subname {
+      color: #062e60;
+    }
+    .widget-folder-name {
+      font-size: 14px;
+    }
+    &-active {
+      background: #c9e4ff;
+    }
+  }
+  &-container {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    width: 100%;
+    padding-right: 15px;
+    margin-bottom: 5px;
+    .widget-dropdown {
+      overflow: inherit;
+    }
+  }
+  &-resize {
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+    &-button {
+      cursor: w-resize;
+    }
+  }
+  &-preloader {
+    display: none;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    &-icon {
+      i {
+        color: #0977ff;
+        font-size: 52px;
+      }
+    }
+    &-text {
+      color: #062e60;
+      font-size: 16px;
+      font-weight: 600;
+    }
+  }
+}
+
+//widget connection status
+.connection {
+  border-radius: 43px;
+  padding: 3px 8px;
+  text-transform: capitalize;
+  i {
+    padding-right: 4px;
+    font-size: 5px;
+  }
+  &-good {
+    color: #056838;
+    background: #c7ffc6;
+  }
+  &-bad {
+    background: #ffc7c7;
+    color: #680b05;
+  }
+  &-average {
+    background: #ffd5bd;
+    color: #682905;
+  }
+}
+
+.widget-wrap .widget-folder:hover + .widget-dropdown {
+  opacity: 1;
+  visibility: visible;
+  position: relative;
+}
+.widget-container > .widget-dropdown {
+  overflow: inherit !important;
+}
+.widget-wrap .widget-dropdown {
+  width: 100%;
+  margin: 0 auto;
+  padding: 0;
+  opacity: 0;
+  visibility: hidden;
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+}
+.widget-container.widget-dropdown {
+  width: 100%;
+  margin: 0 auto;
+  padding: 0;
+  opacity: 0;
+  visibility: hidden;
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+}
+.device-wrap {
+  display: flex;
+  flex-direction: column;
+}

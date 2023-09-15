@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Demo icons</title>
+    <style>
+        body{background-color:#fff;color:#363638;margin:0}.ungic_icons-desc{font-family: Arial, Helvetica, sans-serif; color: gray; font-size: 14px; background-color: #fafafa; border-left: 3px solid #CCC; padding: 10px 10px 10px 20px}.ungic_icons-page{max-width:1000px;margin:20px auto}.ungic_icons-page h2{font-size:2em;margin-bottom:1em;color:#282a2f;font-weight:400}.ungic_icons-page .icon-name{display:block;line-height:1;margin-top:.5em;color:#3f3f43}.ungic_icons-items{display:flex;flex-wrap:wrap;margin-bottom:2em;padding-bottom:2em}.ungic_icons-items:not(:last-child){border:none;border-bottom:2px solid #f8f8f8}.ungic_icons-item{padding:1.5em;background:transparent;cursor:pointer;font-size:inherit;text-align:center;border:none;transition:all .2s}.ungic_icons-item:hover{transform:scale(1.2);background:#fafafa}.no-icons{text-align:center;padding:20px}
+    </style>
+    <link rel="stylesheet" href="http://127.0.0.1:2020/ungic/font-icons">
+    <link rel="stylesheet" href="http://127.0.0.1:2020/ungic/sprites">
+    <script src="http://127.0.0.1:2020/ungic/pipe?as=ungic-icons,icons&timeout=50"></script>
+</head>
+<body>
+    <div class="ungic_icons-page">
+        <p class="ungic_icons-desc">Click on the icon to get its ID</p>
+        <br>
+        <h2>Font icons</h2>
+        <div class="ungic_icons-items">
+            <button title="camera" class="ungic_icons-item" data-id="camera">
+                <i aria-hidden="true" class=" icon icon-camera"></i><span  class="icon-label">camera</span>
+            </button>
+            <button title="checkbox" class="ungic_icons-item" data-id="checkbox">
+                <i aria-hidden="true" class=" icon icon-checkbox"></i><span  class="icon-label">checkbox</span>
+            </button>
+            <button title="click" class="ungic_icons-item" data-id="click">
+                <i aria-hidden="true" class=" icon icon-click"></i><span  class="icon-label">click</span>
+            </button>
+            <button title="connection" class="ungic_icons-item" data-id="connection">
+                <i aria-hidden="true" class=" icon icon-connection"></i><span  class="icon-label">connection</span>
+            </button>
+            <button title="cross" class="ungic_icons-item" data-id="cross">
+                <i aria-hidden="true" class=" icon icon-cross"></i><span  class="icon-label">cross</span>
+            </button>
+            <button title="filter_arrow" class="ungic_icons-item" data-id="filter_arrow">
+                <i aria-hidden="true" class=" icon icon-filter_arrow"></i><span  class="icon-label">filter arrow</span>
+            </button>
+            <button title="filter" class="ungic_icons-item" data-id="filter">
+                <i aria-hidden="true" class=" icon icon-filter"></i><span  class="icon-label">filter</span>
+            </button>
+            <button title="layers" class="ungic_icons-item" data-id="layers">
+                <i aria-hidden="true" class=" icon icon-layers"></i><span  class="icon-label">layers</span>
+            </button>
+            <button title="minus" class="ungic_icons-item" data-id="minus">
+                <i aria-hidden="true" class=" icon icon-minus"></i><span  class="icon-label">minus</span>
+            </button>
+            <button title="pin" class="ungic_icons-item" data-id="pin">
+                <i aria-hidden="true" class=" icon icon-pin"></i><span  class="icon-label">pin</span>
+            </button>
+            <button title="placemark" class="ungic_icons-item" data-id="placemark">
+                <i aria-hidden="true" class=" icon icon-placemark"></i><span  class="icon-label">placemark</span>
+            </button>
+            <button title="plus" class="ungic_icons-item" data-id="plus">
+                <i aria-hidden="true" class=" icon icon-plus"></i><span  class="icon-label">plus</span>
+            </button>
+            <button title="preloader" class="ungic_icons-item" data-id="preloader">
+                <i aria-hidden="true" class=" icon icon-preloader"></i><span  class="icon-label">preloader</span>
+            </button>
+            <button title="resize" class="ungic_icons-item" data-id="resize">
+                <i aria-hidden="true" class=" icon icon-resize"></i><span  class="icon-label">resize</span>
+            </button>
+            <button title="search" class="ungic_icons-item" data-id="search">
+                <i aria-hidden="true" class=" icon icon-search"></i><span  class="icon-label">search</span>
+            </button>
+            <button title="sensor" class="ungic_icons-item" data-id="sensor">
+                <i aria-hidden="true" class=" icon icon-sensor"></i><span  class="icon-label">sensor</span>
+            </button>
+            <button title="sites" class="ungic_icons-item" data-id="sites">
+                <i aria-hidden="true" class=" icon icon-sites"></i><span  class="icon-label">sites</span>
+            </button>
+            <button title="unpin" class="ungic_icons-item" data-id="unpin">
+                <i aria-hidden="true" class=" icon icon-unpin"></i><span  class="icon-label">unpin</span>
+            </button>
+            <button title="zones_arrow" class="ungic_icons-item" data-id="zones_arrow">
+                <i aria-hidden="true" class=" icon icon-zones_arrow"></i><span  class="icon-label">zones arrow</span>
+            </button>
+            <button title="zones" class="ungic_icons-item" data-id="zones">
+                <i aria-hidden="true" class=" icon icon-zones"></i><span  class="icon-label">zones</span>
+            </button>
+        </div>
+    </div>
+    <script>!function(){let e;document.addEventListener("click",function(t){let o=t.target.closest(".ungic_icons-item");if(t.target.classList.contains("ungic_icons-item")||o){let n=(o||t.target).getAttribute("data-id");var l=document.createElement("input");l.value=n,l.style.position="absolute",l.style.top="-1000px",l.style.opacity=0,document.querySelector("body").appendChild(l),l.select(),l.setSelectionRange(0,99999),document.execCommand("copy");let i=document.createElement("div");i.style.backgroundColor="#5cc80d",i.style.color="#FFF",i.style.fontSize="20px",i.style.padding="8px 20px",i.style.borderRadius="4px",i.style.position="fixed",i.style.fontFamily="Arial",i.style.left="20px",i.style.top="20px",i.style.boxShadow="3px 3px 12px rgba(0,0,0,.2)",i.style.zIndex="1000",i.innerHTML="ID copied!",document.querySelector("body").appendChild(i),clearTimeout(e),e=setTimeout(function(){i.remove(),l.remove()},1e3)}})}();</script>
+    
+</body>
+</html>
