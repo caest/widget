@@ -77,7 +77,6 @@ input[type="search"]::-webkit-search-results-decoration {
     .widget-header {
       border-radius: 8px;
       background: #f4f8fb;
-      padding: 5px 5px 5px 7px;
       &-button {
         display: none;
         &-expand {
@@ -109,7 +108,7 @@ input[type="search"]::-webkit-search-results-decoration {
   &-drag {
     //    display: none;
     position: absolute;
-    right: 200px;
+    right: 250px;
     .widget-header {
       &-button {
         &-unpin {
@@ -117,12 +116,16 @@ input[type="search"]::-webkit-search-results-decoration {
         }
         &-pin {
           display: block;
+          width: 24px;
+          height: 24px;
+          font-size: 8px;
         }
       }
     }
     .widget-body {
-      min-height: 600px;
+      height: 100%;      
       border-radius: 0 0 12px 12px;
+      padding: 13px 12px 50px 13px;
     }
   }
   &-header {
@@ -138,19 +141,18 @@ input[type="search"]::-webkit-search-results-decoration {
       color: #90a3b5;
     }
     &-button {
-      font-size: 3px;
+      width: 24px;
+      height: 24px;
+      font-size: 2px;
       &-pin {
         display: none;
         font-size: 12px;
       }
       &-unpin {
         display: block;
-        font-size: 12px;
-      }
-      &:nth-child(2) {
-        font-size: 12px;
-        position: relative;
-        z-index: 1;
+        width: 24px;
+        height: 24px;
+        font-size: 8px;
       }
     }
   }
@@ -183,7 +185,8 @@ input[type="search"]::-webkit-search-results-decoration {
     padding: 0;
     box-shadow: none;
     color: #abb7c2;
-
+    width: 24px;
+    height: 24px;
     cursor: pointer;
     &-text {
       font-size: 14px;
@@ -195,7 +198,7 @@ input[type="search"]::-webkit-search-results-decoration {
       }
     }
     .icon-filter {
-      font-size: 24px;
+      font-size: 20px;
     }
     .icon-click {
       font-size: 18px;
@@ -246,7 +249,7 @@ input[type="search"]::-webkit-search-results-decoration {
     &-label {
       position: absolute;
       right: 10px;
-      font-size: 10px;
+      font-size: 7px;
       color: #abb7c2;
       cursor: pointer;
     }
