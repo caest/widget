@@ -1,0 +1,66 @@
+<div class="widget-item {{#if opened}}active{{/if}}">
+    <button class="widget-folder widget-subfolder">
+        <flex-box ai="center" jc="space-between">
+            <flex-box ai="center" class="">
+                <div class="">
+                    <label class="widget-folder-label">
+                        <input class="widget-folder-check input" checked type="checkbox">
+                        <span>{{{icon "checkbox"}}}</span>
+                    </label>
+                </div>
+                <div class="widget-folder-name widget-subname">
+                    {{{icon "zones"}}}
+                    <span>Zone 1</span>
+                </div>
+            </flex-box>
+            <div class="widget-folder-icon">{{{icon "zones_arrow"}}}</div>
+        </flex-box>
+    </button>
+
+
+    <div class="widget-dropdown widget-list">
+        <div class="widget-item {{#if opened}}active{{/if}}">
+            <button class="widget-folder widget-subfolder">
+                <flex-box ai="center" jc="space-between">
+                    <flex-box ai="center" class="">
+                        <div class="">
+                            <label class="widget-folder-label">
+                                <input class="widget-folder-check input" checked type="checkbox">
+                                <span>{{{icon "checkbox"}}}</span>
+                            </label>
+                        </div>
+                        <div class="widget-folder-name widget-subname">
+                            {{{icon "zones"}}}
+                            <span>Zone 1</span>
+                        </div>
+                    </flex-box>
+                    <div class="widget-folder-icon">{{{icon "zones_arrow"}}}</div>
+                </flex-box>
+            </button>
+
+
+            <div class="widget-dropdown widget-list">
+                {{{include "templates/widget-field.hbs"}}}
+                {{{include "templates/widget-field.hbs"}}}
+                {{{include "templates/widget-field.hbs"}}}
+                {{{include "templates/widget-field.hbs"}}}
+                {{{include "templates/widget-field.hbs"}}}
+                {{{include "templates/widget-field.hbs"}}}
+                {{{include "templates/widget-field.hbs"}}}
+                {{{include "templates/widget-field.hbs"}}}
+                {{{include "templates/widget-field.hbs"}}}
+            </div>
+
+        </div>
+        {{{include "templates/widget-field.hbs"}}}
+        {{{include "templates/widget-field.hbs"}}}
+        {{{include "templates/widget-field.hbs"}}}
+        {{{include "templates/widget-field.hbs"}}}
+        {{{include "templates/widget-field.hbs"}}}
+        {{{include "templates/widget-field.hbs"}}}
+        {{{include "templates/widget-field.hbs"}}}
+        {{{include "templates/widget-field.hbs"}}}
+        {{{include "templates/widget-field.hbs"}}}
+    </div>
+
+</div>

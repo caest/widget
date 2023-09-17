@@ -1,0 +1,23 @@
+<flex-box ai="center" jc="space-between" class="widget-folder widget-field">
+    <flex-box ai="center" class="">
+        <div class="">
+            <label class="widget-folder-label">
+                <input class="widget-folder-check input" checked type="checkbox">
+                <span>{{{icon "checkbox"}}}</span>
+            </label>
+        </div>
+        <div class="widget-folder-name widget-subname">
+            {{{icon "camera"}}}
+            <div class="device-wrap" style="display: flex;flex-direction: column;">
+                <span>Zones</span>
+                <span class="widget-folder-device">Camera 1</span>
+            </div>
+        </div>
+    </flex-box>
+    <div class="widget-folder-connection connection connection-bad">
+        <flex-box ai="center">{{{icon "connection"}}} No connection</flex-box>
+    </div>
+    <div class="widget-folder-sensor">
+        <button class="widget-button">{{{icon "click"}}}</button>
+    </div>
+</flex-box>
