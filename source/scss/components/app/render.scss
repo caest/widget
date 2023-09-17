@@ -46,12 +46,13 @@
 }
 
 body {
-  font-family: "Open Sans";
+  font-family: 'Open Sans';
   margin: 0;
   box-sizing: border-box;
   background: #8e8d8d;
   overflow: hidden;
 }
+
 //input reset
 input[type="search"]::-webkit-search-decoration,
 input[type="search"]::-webkit-search-cancel-button,
@@ -198,10 +199,10 @@ input[type="search"]::-webkit-search-results-decoration {
       }
     }
     .icon-filter {
-      font-size: 20px;
+      font-size: 18px;
     }
     .icon-click {
-      font-size: 18px;
+      font-size: 14px;
     }
   }
   &-filter {
@@ -249,7 +250,7 @@ input[type="search"]::-webkit-search-results-decoration {
     &-label {
       position: absolute;
       right: 10px;
-      font-size: 7px;
+      font-size: 6px;
       color: #abb7c2;
       cursor: pointer;
     }
@@ -265,6 +266,7 @@ input[type="search"]::-webkit-search-results-decoration {
     padding: 12px;
     position: relative;
     width: 100%;
+    transition: all .2s;
     &-active {
       background: #c9e4ff;
       .widget-folder-name {
@@ -275,7 +277,17 @@ input[type="search"]::-webkit-search-results-decoration {
         transform: rotateZ(180deg);
       }
     }
-
+    &:hover {
+      transition: all .2s;
+      background: #c9e4ff;
+      .widget-folder-name {
+        color: #062e60;
+      }
+      .widget-folder-icon {
+        color: #062e60;
+        transform: rotateZ(180deg);
+      }
+    }
     &-connection {
       font-size: 8px;
     }
@@ -287,7 +299,7 @@ input[type="search"]::-webkit-search-results-decoration {
         padding-left: 10px;
       }
       .icon {
-        font-size: 22px;
+        font-size: 18px;
       }
     }
     &-icon {
@@ -358,7 +370,7 @@ input[type="search"]::-webkit-search-results-decoration {
     font-weight: 400;
     font-size: 14px;
     .icon {
-      font-size: 20px;
+      font-size: 14px;
     }
   }
   &-field {
@@ -392,6 +404,7 @@ input[type="search"]::-webkit-search-results-decoration {
     right: 10px;
     &-button {
       cursor: w-resize;
+      font-size: 12px;
     }
   }
   &-preloader {
