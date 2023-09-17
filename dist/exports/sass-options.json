@@ -1,9 +1,9 @@
 [
     {
         "oid": "config",
-        "cid": "app",
+        "cid": "test",
         "data": {},
-        "id": "app__config"
+        "id": "test__config"
     },
     {
         "oid": "theme",
@@ -63,8 +63,8 @@
     },
     {
         "oid": "config",
-        "cid": "test",
+        "cid": "app",
         "data": {},
-        "id": "test__config"
+        "id": "app__config"
     }
 ]

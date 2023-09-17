@@ -33,6 +33,94 @@
 //
 $buttonSize: 32px;
 
+//icomoon
+@font-face {
+  font-family: 'icomoon';
+  src:  url('../fonts/icomoon.eot?asaqcf');
+  src:  url('../fonts/icomoon.eot?asaqcf#iefix') format('embedded-opentype'),
+    url('../fonts/icomoon.ttf?asaqcf') format('truetype'),
+    url('../fonts/icomoon.woff?asaqcf') format('woff'),
+    url('../fonts/icomoon.svg?asaqcf#icomoon') format('svg');
+  font-weight: normal;
+  font-style: normal;
+  font-display: block;
+}
+
+[class^="icon-"], [class*=" icon-"] {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: 'icomoon' !important;
+  speak: never;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-resize:before {
+  content: "\e90d";
+}
+.icon-zones:before {
+  content: "\e901";
+}
+.icon-camera:before {
+  content: "\e900";
+}
+.icon-checkbox:before {
+  content: "\1f338";
+}
+.icon-click:before {
+  content: "\e902";
+}
+.icon-connection:before {
+  content: "\e903";
+}
+.icon-cross:before {
+  content: "\e904";
+}
+.icon-filter:before {
+  content: "\e905";
+}
+.icon-filter-arrow:before {
+  content: "\e906";
+}
+.icon-layers:before {
+  content: "\e907";
+}
+.icon-minus:before {
+  content: "\e908";
+}
+.icon-pin:before {
+  content: "\e909";
+}
+.icon-placemark:before {
+  content: "\e90a";
+}
+.icon-plus:before {
+  content: "\e90b";
+}
+.icon-preloader:before {
+  content: "\e90c";
+}
+.icon-search:before {
+  content: "\e917";
+}
+.icon-sensor:before {
+  content: "\e918";
+}
+.icon-sites:before {
+  content: "\e91e";
+}
+.icon-unpin:before {
+  content: "\e91f";
+}
+.icon-zones-arrow:before {
+  content: "\e921";
+}
 
 //scroll
 ::-webkit-scrollbar {
@@ -191,7 +279,7 @@ input[type="search"]::-webkit-search-results-decoration {
   &-header {
     background: gray(0.9);
     border-radius: 12px 12px 0px 0px;
-    padding: 2px 10px;
+    padding: 0px 10px;
     display: flex;
     min-height: 40px;
     align-items: center;
@@ -206,14 +294,14 @@ input[type="search"]::-webkit-search-results-decoration {
       padding-left: 8px;
     }
     &-button {
-      font-size: 2px;
+      font-size: 14px;
       &-pin {
         display: none;
         font-size: 12px;
       }
       &-unpin {
         display: block;
-        font-size: 8px;
+        font-size: 16px;
       }
     }
   }
@@ -293,7 +381,7 @@ input[type="search"]::-webkit-search-results-decoration {
     &-label {
       position: absolute;
       right: 10px;
-      font-size: 6px;
+      font-size: 14px;
       color: gray();
       cursor: pointer;
     }
@@ -341,7 +429,7 @@ input[type="search"]::-webkit-search-results-decoration {
       }
     }
     &-icon {
-      font-size: 4px;
+      font-size: 12px;
       color: color(text-color);
       transition: all 0.2s;
     }
@@ -356,8 +444,8 @@ input[type="search"]::-webkit-search-results-decoration {
         height: 16px;
         background: color(background-color);
         border-radius: 3px;
-        i {
-          font-size: 7px;
+        &::before {
+          font-size: 10px;
           opacity: 0;
           color: color(primary);
           position: absolute;
@@ -372,7 +460,7 @@ input[type="search"]::-webkit-search-results-decoration {
           outline: 2px solid #000;
         }
       }
-      input[type="checkbox"]:checked + span i {
+      input[type="checkbox"]:checked + span:before{
         opacity: 1;
       }
     }
@@ -395,7 +483,7 @@ input[type="search"]::-webkit-search-results-decoration {
       background: color(primary, 0.9);
     }
     .widget-folder-icon {
-      font-size: 3px;
+      font-size: 10px;
     }
   }
   &-subname {
@@ -431,8 +519,11 @@ input[type="search"]::-webkit-search-results-decoration {
     bottom: 10px;
     right: 10px;
     &-button {
+      display: flex;
+      align-items: center;
+      justify-content: center;
       cursor: w-resize;
-      font-size: 12px;
+      font-size: 20px;
     }
   }
   &-preloader {
@@ -460,9 +551,9 @@ input[type="search"]::-webkit-search-results-decoration {
   border-radius: 43px;
   padding: 3px 8px;
   text-transform: capitalize;
-  i {
+  span {
     padding-right: 4px;
-    font-size: 5px;
+    font-size: 10px;
   }
   &-good,
   &-success {
@@ -485,7 +576,7 @@ input[type="search"]::-webkit-search-results-decoration {
   }
 }
 
-x .device-wrap {
+ .device-wrap {
   display: flex;
   flex-direction: column;
 }
