@@ -124,6 +124,7 @@
           "scss": "scss",
           "html": "pages",
           "icons": "icons",
+          "fonts": "fonts",
           "assets": "assets"
       }
   },
